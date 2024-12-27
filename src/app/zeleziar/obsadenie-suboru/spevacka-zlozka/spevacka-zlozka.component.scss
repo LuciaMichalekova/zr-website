@@ -1,0 +1,43 @@
+.title{
+    position: relative;
+    display: flex;
+    padding-top: 10rem;
+    padding-bottom: 1rem;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    font-size: xx-large;
+}
+
+.content{
+    padding: 3rem 0rem;
+    .info{
+        padding: 1rem;
+        .container{
+            text-align: center;
+        }
+    }
+
+    .profile{
+        text-align: center;
+        padding: 1rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        .pic{
+            position: relative;
+            display: inline-block;
+            padding: 1rem;
+            text-align: center;
+            img{
+                width: 15rem;
+            }
+            .name{
+                position: absolute; 
+                background: rgba(0, 0, 0, 0.5); 
+                color: white; 
+                bottom: 2.5rem;
+                text-align: 
+                center; padding: 10px;
+            }
+        }
+    }
+}

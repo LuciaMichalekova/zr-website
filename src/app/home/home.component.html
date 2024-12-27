@@ -1,0 +1,49 @@
+<div class="home">
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img id="slide-1" src="assets/img/obrazok1.jpg">
+            <img id="slide-2" src="assets/img/obrazok2.jpg">            
+            <img id="slide-3" src="assets/img/obrazok3.jpg">
+        </div>
+        
+        <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+        </div>
+
+        <button class="slider-arrow slider-arrow-left" aria-label="Previous Slide" (click)="slide(-1)"><i class="fa-solid fa-arrow-left-long fa-lg"></i></button>
+        <button class="slider-arrow slider-arrow-right" aria-label="Next Slide" (click)="slide(1)"><i class="fa-solid fa-arrow-right-long fa-lg" ></i></button>
+    </div>
+
+
+    <h1 class="title">Predstavenia</h1>
+    <div class="content">
+        <div class="container" *ngFor="let item of dataSource1 | slice:0:3">
+            <p class="primary-info"> {{ item.date }} </p>  
+            <p class="primary-info"> {{ item.name }} </p>  
+            <p class="secondary-info"> <i class="fa-solid fa-location-dot"></i> {{item.city}}, {{ item.place }} ({{ item.time }})</p>        
+            <p class="secondary-info"><i class="fa-solid fa-clock"></i> {{item.duration}}</p>
+            <p class="truncate"> {{ item.info }} </p>
+            <button class="buy-button">Kúpiť vstupenky</button>
+        </div>
+
+        <div class="actions">
+            <button class="button" routerLink="predstavenia" routerLinkActive="active">Ďalšie</button>
+        </div>
+    </div>
+
+    <h1 class="title">Aktuality</h1>
+    <div class="content">
+        <div class="container" *ngFor="let item of dataSource2 | slice:0:3">
+            <p class="title-image"><img src="{{item.titleImage}}" style="width: 15rem"></p>
+            <p class="primary-info"> {{ item.title }} </p>  
+            <p class="truncate"> {{ item.text }} </p>  
+            <button class="buy-button">Kúpiť vstupenky</button>
+        </div>
+
+        <div class="actions">
+            <button class="button" routerLink="aktuality" routerLinkActive="active">Ďalšie</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="title">
+    SPEVÁCKA ZLOŽKA
+</div>
+
+<div class="content">
+    <div class="info">
+        <!-- TODO: par peknych slov o spevackach -->
+         
+        <div class="container">
+            <p><b>Vedúca speváckej zložky</b></p>
+            <p>Michaela Bratrůová</p>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="pic" *ngFor="let item of dataSource">
+            <img src="{{item.image}}" alt="">
+            <div class="name">
+                <b>{{item.name}}</b>
+            </div>
+        </div>
+    </div>
+</div>

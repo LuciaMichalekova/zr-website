@@ -1,0 +1,43 @@
+.footer{
+    padding:2rem;
+    padding-top: 1rem;
+    background-color: black;
+    color: white;
+    .content{
+        padding-bottom: 1rem;
+        .logo{
+            width: 5rem;
+        }
+        .info{
+            text-align: center;
+            font-size: small;
+            display: inline-block;
+            vertical-align: top;
+            width: 20rem;
+            .title{
+                font-size: medium;
+                color: grey;
+            }
+        }
+    }
+
+    hr{
+        border-color: grey;
+        height: 0.5px;
+    }
+
+    .partners{
+        text-align: center;
+        padding-top: 0.5rem;
+        .title{
+            font-size: medium;
+            padding-bottom: 1rem;
+            color: grey;
+        }
+        img{
+            display: inline-block;
+            height: 3rem;
+            margin: 0 1rem;
+        }
+    }
+}

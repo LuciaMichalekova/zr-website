@@ -1,0 +1,73 @@
+
+<main>
+  <nav class="navbar" [ngClass]="{'scrolled': scrolled}">
+    <div class="logo" routerLink="" routerLinkActive="active">
+        <img src="assets/img/zeleziar-logo-1019x1024-removebg-preview.png"> 
+    </div>
+  
+    <div class="navigation">
+      <button class="button" mat-button [matMenuTriggerFor]="zeleziarMenu" style="font-family: 'Merienda', serif;"> Železiar </button>
+      <mat-menu #zeleziarMenu="matMenu">
+        
+        <button mat-menu-item routerLink="zeleziar/o-nas" routerLinkActive="active"> O nás </button>
+
+        <button mat-menu-item [matMenuTriggerFor]="obsadenieSuboru"> Obsadenie súboru </button>
+          <mat-menu #obsadenieSuboru="matMenu">
+            <button mat-menu-item routerLink="zeleziar/obsadenie-suboru/umelecke-vedenie" routerLinkActive="active">Vedenie</button>
+            <button mat-menu-item routerLink="zeleziar/obsadenie-suboru/tanecna-zlozka" routerLinkActive="active">Tanečná zložka</button>
+            <button mat-menu-item routerLink="zeleziar/obsadenie-suboru/spevacka-zlozka" routerLinkActive="active">Spevácka zložka</button>
+            <button mat-menu-item routerLink="zeleziar/obsadenie-suboru/hudobna-zlozka" routerLinkActive="active">Hudobná zložka</button>
+          </mat-menu>
+
+        <button mat-menu-item  [matMenuTriggerFor]="kronika">Kronika</button>
+        <mat-menu #kronika="matMenu">
+          <button mat-menu-item routerLink="zeleziar/kronika" routerLinkActive="active"> Osobnosti súboru</button>
+          <button mat-menu-item routerLink="zeleziar/kronika" routerLinkActive="active"> Vystúpenia</button>
+          <button mat-menu-item routerLink="zeleziar/kronika" routerLinkActive="active"> Premiéry</button>
+          <button mat-menu-item routerLink="zeleziar/kronika" routerLinkActive="active"> Repertoár</button>
+          <button mat-menu-item routerLink="zeleziar/kronika" routerLinkActive="active"> Výročia</button>
+          <button mat-menu-item routerLink="zeleziar/kronika" routerLinkActive="active"> Ocenenia</button>
+          <button mat-menu-item routerLink="zeleziar/kronika" routerLinkActive="active"> Maratón tanca</button>
+        </mat-menu>    
+
+        <button mat-menu-item [matMenuTriggerFor]="galeriaMenu">Galéria</button>
+        <mat-menu #galeriaMenu="matMenu">
+          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">2024</button>
+          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">2023</button>
+          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">2022</button>
+          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">2021</button>
+          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">Archív</button>
+        </mat-menu>
+
+        <button mat-menu-item routerLink="zeleziar/napisali-o-nas" routerLinkActive="active">Napísali o nás</button>
+      </mat-menu>
+  
+      <button mat-button class="button" routerLink="aktuality" routerLinkActive="active" style="font-family: 'Merienda', serif;">Aktuality</button>
+  
+      <button mat-button class="button" routerLink="predstavenia" routerLinkActive="active" style="font-family: 'Merienda', serif;">Predstavenia</button>
+  
+      <button mat-button class="button" [matMenuTriggerFor]="belowMenu" style="font-family: 'Merienda', serif;">Ponúkame</button>
+      <mat-menu #belowMenu="matMenu">
+        <button mat-menu-item routerLink="ponukame/aktualne-programy" routerLinkActive="active">Aktuálne programy</button>
+        <button mat-menu-item routerLink="ponukame/kurz-ludovych-tancov" routerLinkActive="active">Kurz ľudových tancov</button>
+        <button mat-menu-item routerLink="ponukame/pozicovna-krojov" routerLinkActive="active">Požičovňa krojov</button>
+        <button mat-menu-item routerLink="ponukame/pozicovna-krojov" routerLinkActive="active">Fotenie v kroji</button>
+        <button mat-menu-item routerLink="ponukame/produkty" routerLinkActive="active">CD/DVD/USB nosiče</button>
+        <button mat-menu-item routerLink="ponukame/produkty" routerLinkActive="active">Knihy</button>    
+        <button mat-menu-item routerLink="ponukame/produkty" routerLinkActive="active">Umelecké predmety a suveníry</button>
+      </mat-menu>
+      
+      <button mat-button class="button" routerLink="kontakty" routerLinkActive="active" style="font-family: 'Merienda', serif;">Kontakty</button>
+    </div>
+  
+    <div class="social-media">
+      <i class="fab fa-instagram" style="margin-right: 1rem;"></i>
+      <i class="fab fa-facebook-square" style="margin: 0 1rem"></i>
+      <i class="fab fa-spotify" style="margin: 0 1rem"></i>
+      <i class="fab fa-youtube" style="margin-left: 1rem"></i>
+    </div>
+  </nav>
+  
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</main>
