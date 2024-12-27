@@ -1,0 +1,30 @@
+<div class="main-title">
+    <p>PREDSTAVENIA</p>
+</div>
+
+<div class="content" >
+    <div class="container" *ngFor="let item of dataSource">
+        <div class="info">
+            <p class="primary">{{item.date}}</p>
+            <p class="secondary">{{item.city}}</p>
+            <p class="tertiary">{{item.time}}</p>
+        </div>
+        
+        <div class ="info">
+            <p class="primary">{{item.name}}</p>
+            <p class="tertiary">{{item.info}}</p>
+        </div>
+        
+        <div class="info">
+            <p class="tertiary">{{item.duration}}</p>
+            <p class="tertiary">{{item.place}}</p>
+            <p class="tertiary">{{item.city}}</p>
+        </div>
+
+        <div class="button">
+            <button mat-button> Kúpiť vstupenku </button>
+        </div>
+
+        <hr>
+    </div>
+</div>

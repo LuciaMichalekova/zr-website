@@ -1,0 +1,26 @@
+<div class="title">
+    HUDOBNÁ ZLOŽKA
+</div>
+
+<div class="content">
+    <div class="info">
+        <div class="container">
+            <p><b>Vedúci hudobnej zložky</b></p>
+            <p>Marek Ščurka</p>
+        </div>
+
+        <div class="container">
+            <p><b>Primáš ľudovej hudby</b></p>
+            <p>Filip Žiga</p>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="pic" *ngFor="let item of dataSource">
+            <img src="{{item.image}}" alt="">
+            <div class="name">
+                <b>{{item.name}}</b>
+            </div>
+        </div>
+    </div>
+</div>

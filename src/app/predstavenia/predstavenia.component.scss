@@ -1,0 +1,62 @@
+.main-title{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: grey;
+  color: white;
+  display: flex;
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  font-size: xxx-large;
+}
+
+
+.content{
+    padding: 2rem;
+    .container {
+        text-align: center;
+        display: flex; /* Use flexbox for horizontal alignment */
+        flex-wrap: wrap; /* Ensures wrapping if the content doesn't fit */
+        align-items: center; /* Aligns items vertically in the center */
+      
+        .info {
+          display: inline-block;
+          width: 15%;
+          margin: 0 1rem; /* Adjust margin for consistent spacing */
+          text-align: left; /* Optional, to align text inside the blocks */
+          line-height: 1.2;
+          P{
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+          .primary{
+            font-size: medium;
+            font-weight: 500;
+            color:black;
+          }
+          .secondary{
+            font-size: medium;
+            color:grey;
+          }
+          .tertiary{
+            font-size: small;
+            color: gray;
+          }
+        }
+      
+        .button {
+          display: inline-flex; /* Keeps it inline and flex-enabled */
+          justify-content: center; /* Centers the button horizontally */
+          align-items: center; /* Centers the button vertically */
+        }
+      
+        hr {
+          width: 100%; /* Ensures the horizontal line spans the full width */
+          margin: 1rem 0; /* Adds spacing above and below the line */
+          border: 0;
+          border-top: 1px solid #ddd; /* A subtle divider */
+        }
+      }
+      
+}

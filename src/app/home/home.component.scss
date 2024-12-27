@@ -1,0 +1,130 @@
+.home{
+    //background-image: url("../../assets/img/360_F_413792844_yVqFfyQwi98ytDb4zEFUSsxjSuwTJxu7.jpg");
+    .slider-wrapper{
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        margin: 0 auto;
+        .slider{
+            width:100%;
+            height: 80vh;
+            display: flex;
+            aspect-ratio: 16/9;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;  // Hide scrollbar in IE and Edge
+            scrollbar-width: none;     // Hide scrollbar in Firefox
+            &::-webkit-scrollbar {
+                display: none;         // Hide scrollbar in Chrome, Safari, and Edge
+            }
+            img{
+                flex: 1 0 100%;
+                scroll-snap-align: start;
+                object-fit: cover;
+            }
+        }
+        .slider-nav{
+            display: flex;
+            column-gap: 1rem;
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            a{
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity:0.75;
+                transition: opacity ease 250ms;
+                :hover{
+                    opacity: 1;
+                }
+            }
+        }
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 250ms ease;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        .slider-arrow-left {
+            left: 1rem;
+        }
+
+        .slider-arrow-right {
+            right: 1rem;
+        }
+    }
+
+    .title{
+        text-align: center;
+        font-size: xxx-large;
+    }
+
+    .content{
+        margin: 0.5rem;
+        text-align: center;
+        .container{
+            vertical-align: top;
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.3rem;
+            background-color:rgb(249, 241, 229);
+            border-radius: 5%;
+            width: 20rem;
+            height: 25rem;
+            i{
+                display: inline-block;
+            }
+            .primary-info{
+                font-size: xx-large;
+                margin: 0;
+                padding: 0;
+                margin-top: 1rem;
+            }
+            .secondary-info{
+                // margin:0;
+                // padding: 0;
+            }
+            .truncate{
+                display: -webkit-box; /* Use for flexbox layout */
+                -webkit-box-orient: vertical; /* Specify vertical orientation */
+                overflow: hidden; /* Hide overflowing text */
+                -webkit-line-clamp: 2; /* Limit text to 2 lines */
+            }
+            .buy-button{
+                padding: 0.7rem;
+                background-color: black; /* Bootstrap blue */
+                color: white;
+                border-radius: 15px; /* Rounds the corners */
+                cursor: pointer;
+                transition: background-color 0.3s, border-color 0.3s; /* Smooth hover effect */
+            }
+        }
+        .actions{
+            .button{
+                padding: 0.7rem;
+                background-color: black; /* Bootstrap blue */
+                color: white;
+                border-radius: 15px; /* Rounds the corners */
+                cursor: pointer;
+                transition: background-color 0.3s, border-color 0.3s; /* Smooth hover effect */
+            }
+        }
+    }
+}

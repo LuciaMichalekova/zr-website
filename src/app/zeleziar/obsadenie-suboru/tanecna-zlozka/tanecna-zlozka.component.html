@@ -1,0 +1,35 @@
+<div class="title">
+    TANEČNÁ ZLOŽKA
+</div>
+
+<div class="content">
+    <div class="info">
+        
+        <!-- TODO: par peknych slov o tanecnej zlozke -->
+
+        <div class="container">
+            <p><b>Vedúci mužskej tanečnej zložky</b></p>
+            <p>Jozef Ďurkovič</p>
+        </div>
+
+        <div class="container">
+            <p><b>Vedúca ženskej tanečnej zložky</b></p>
+            <p>Jozef Ďurkovič</p>
+        </div>
+
+        <div class="container">
+            <p><b>Umeleckí vedúci a choreografi</b></p>
+            <p>Ing. Lukáš Borovský</p>
+            <p>Mgr. Alena Kmecová Škodyová</p>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="pic" *ngFor="let item of dataSource">
+            <img src="{{item.image}}" alt="">
+            <div class="name">
+                <b>{{item.name}}</b>
+            </div>
+        </div>
+    </div>
+</div>

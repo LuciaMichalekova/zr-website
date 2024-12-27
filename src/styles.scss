@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family:  "Merienda", serif}
+button{
+    font-family: "Merienda", serif;
+}
+mat-button{
+    font-family: "Merienda", serif;
+}
+@import '@fortawesome/fontawesome-free/css/all.min.css';
