@@ -4,34 +4,40 @@
     background-color: black;
     color: white;
     .content{
-        padding-bottom: 1rem;
+        padding: 1rem 3rem;
+        display: flex;
+        justify-content: space-between;
         .logo{
-            width: 5rem;
+            width: 7rem;
+            height: 7rem;
+            margin-right: 3rem;
         }
         .info{
             text-align: center;
-            font-size: small;
             display: inline-block;
             vertical-align: top;
             width: 20rem;
             .title{
-                font-size: medium;
+                font-size: larger;
                 color: grey;
             }
+        }
+        .large{
+            width: 37rem;
         }
     }
 
     hr{
         border-color: grey;
-        height: 0.5px;
+        height: 1px;
     }
 
     .partners{
         text-align: center;
         padding-top: 0.5rem;
         .title{
-            font-size: medium;
             padding-bottom: 1rem;
+            font-size: larger;
             color: grey;
         }
         img{

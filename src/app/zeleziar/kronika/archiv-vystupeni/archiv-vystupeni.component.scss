@@ -1,0 +1,34 @@
+.page{
+    .main-title{
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        background-color: grey;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/bg/DSC_5166.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center top;
+        color: white;
+        display: flex;
+        justify-content: center; /* Centers text horizontally */
+        align-items: center; /* Centers text vertically */
+        font-size: xxx-large;
+    }
+
+    .content{
+        padding: 2rem 10rem;
+        background-image: url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/symphony.png");
+        mat-tab-group{
+            background-color: white;
+            border: 5px double rgb(204, 204, 204);
+            padding: 2rem;
+            ul{
+                padding: 0rem 3.5rem;
+                li{
+                    padding-top: 1rem;
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+    }
+}

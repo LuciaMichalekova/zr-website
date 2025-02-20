@@ -1,165 +1,200 @@
-.navbar{
-    position: fixed;      /* Fixes the nav to the top of the page */
-    top: 0;               /* Aligns it at the very top */
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;  /* Semi-transparent background */
-    z-index: 1000;        /* Ensures the nav is on top of other content */
-    padding: 10px 20px;   /* Adjust padding as needed */
-    box-sizing: border-box;
-    &.scrolled {
-        background-color: white;
-        .navigation{
-            .button{
-                color: black !important;
-            }
+.navbar {
+  display:flex;
+  background-color: transparent; 
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;       
+  position: fixed;
+  width: 100vw;   
+  box-sizing: border-box;
+  padding: 0.2rem 5%;
+  font-size: 1.3rem;
+  &.scrolled {
+    background-color: white !important;
+    color: black !important;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.21);
+    transition: 200ms ease-in-out;
+    .menu{
+      li{
+        a{
+          color: black !important;
         }
-        .social-media{
-            i{
-                color: black;
-            }
+        .submenu{
+          color: white !important;
+        }
+      } 
+      .menu-burger{
+        color: black !important;
+      }
+      .social-media a i{
+        color: black !important;
+      }
+    } 
+  }
+  .logo{
+    width: 20%;
+    img{
+      width: 4rem;  
+      cursor: pointer;
+    }
+  }
+    
+  .menu-burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+  .menu {
+    width: 80%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    div{
+      display: flex;
+      flex-direction: row;
+      hr{
+        display: none;
+      }
+      li {
+        position: relative;
+        padding: 10px 20px;
+        a {
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .submenu {
+          list-style: none;
+          position: absolute;
+          font-size: 1rem;
+          left: 0;
+          top: 100%;
+          background: black;
+          display: none;
+          padding: 10px;
+          z-index: 10;
+          transition: max-height 200ms ease-out, opacity 200ms ease-out;
+          .subsubmenu1{
+            list-style: none;
+            position: absolute;
+            background-color: black;
+            padding: 0;
+            left: 110%;
+            top: 0%;
+          }          
+          .subsubmenu2{
+            list-style: none;
+            position: absolute;
+            background-color: black;
+            padding: 0;
+            left: 200%;
+            top: 0%;
+          }          
+          .subsubmenu3{
+            list-style: none;
+            position: absolute;
+            background-color: black;
+            padding: 0;
+            left: 300%;
+            top: 0%;
+          }
+          li {
+            padding: 5px 10px;
+            cursor: pointer;
+          }
+        }
+        &:hover .submenu {
+          display: block;
         }
       }
-    .logo{
-        padding: 0.25rem;
-        img{
-            width: 4rem;  
-            margin-left: 5vw;
-        }
     }
-
-    .navigation{
-        button{
-            font-size: 0.9rem;
-            color: white;
-        }
-    }
+    
     .social-media{
-        margin-right: 5vw;
-        i{
-          font-size: 1.15rem;
-          color: white;
-        }     
+      display: flex;
+      justify-content: center;
+      align-items: center ;
+      a i{
+        padding: 0.5rem;
+        color: white;     
+      }
     }
+  }
 }
 
-// .body{
-//     width: 100%;
-//     height: 100%
-//     }
-    
-//     #sidebarMenu {
-//         height: 171px; /*change here related your menu height*/
-//         position: fixed;
-//         overflow: none;
-//         width: 100%;
-//         z-index: 100;
-//         transform: translateY(-171px); /*change here related your menu height*/
-//     }
-//     .main-content-wrapper a{
-//         width: 100%;
-//         height: 40px;
-//         display: block;
-//         background: #030303;
-//         text-align: center;
-//         padding-top: 15px;
-//         border: 1px solid #4b4545;
-//         color: whitesmoke;
-//         text-decoration: none;
-//     }
-//     #sidebarMenu::-webkit-scrollbar {
-//         width: 12px;
-//     }
-//     #sidebarMenu::-webkit-scrollbar-track {
-//         box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-//         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-//         border-radius: 10px; 
-//     }
-//     #sidebarMenu::-webkit-scrollbar-thumb {
-//         box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-//         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-//         border-radius: 10px;
-//         background: #0000002e;
-//         height: 50px;
-//     }
-//     .sidebarMenuInner{
-//         margin:0;
-//         padding:0;
-//         border-top: 1px solid rgba(255, 255, 255, 0.10);
-//     }
-//     input[type="checkbox"]:checked ~ #sidebarMenu {
-//         transform: translatey(0);
-//         top:50px /*change here related your top menu height*/
-//     }
-//     input[type=checkbox] {
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         display: none;
-//     }
-//     .sidebarIconToggle {
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         cursor: pointer;
-//         position: absolute;
-//         z-index: 99;
-//         height: 22px;
-//         width: 22px;
-//         left:10px;
-//         top:10px;
-//         display: none
-//     }
-//     .spinner {
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         position: absolute;
-//         height: 3px;
-//         width: 100%;
-//         background-color: black;
-//     }
-//     .horizontal {
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         position: relative;
-//         float: left;
-//         margin-top: 3px;
-//     }
-//     .diagonal.part-1 {
-//         position: relative;
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         float: left;
-//     }
-//     .diagonal.part-2 {
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         position: relative;
-//         float: left;
-//         margin-top: 3px;
-//     }
-//     input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         opacity: 0;
-//     }
-//     input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         transform: rotate(135deg);
-//         margin-top: 8px;
-//     }
-//     input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
-//         transition: all 0.3s;
-//         box-sizing: border-box;
-//         transform: rotate(-135deg);
-//         margin-top: -9px;
-//     }
-    
-    
-//      @media screen and (max-width: 950px) {
-//           .sidebarIconToggle{
-//               display:block
-//            }
-//         }
+
+
+@media (max-width: 1200px) {
+  .navbar{
+    &.scrolled {
+      color: white !important;
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.21);
+      transition: 200ms ease-in-out;
+      .menu{
+        .social-media a i{
+          color: white !important;
+        }
+        li a{
+          color: white !important;
+        }
+      } 
+      .menu-burger{
+        color: black;
+      }
+    }
+    .menu-burger {
+      display: flex;
+      z-index: 10;
+      justify-content: end;
+      align-items: center;
+      &.open {
+        color: white !important;
+      }
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      div{
+        display: block;
+        hr{
+          display:block;
+          width: 10rem;
+        }
+        li {
+          border-bottom: 1px solid black;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .submenu {
+            position: static;
+            display: block;
+            z-index: 0;
+          }
+        }
+      }
+      .social-media{
+        padding: 1rem;
+      }
+      &.open {
+        display: flex; 
+      }
+  
+    }
+  }
+}
+
+
+

@@ -1,0 +1,23 @@
+export const KROJE: {name: string , img: string}[] = [
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/Ábelová.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/Abovský kroj myslava.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5462.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5536.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5572.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5586.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5605.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5665.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5687.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5703.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5727.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5741.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5773.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5781.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5834.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5847.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5858.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5902.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/BI4F5915.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/kroj Abov, okolie Košíc.jpg"},
+    {name: "Abelová, Podpoľanie", img: "assets/img/ponuka-krojov/kroj Kojšov.jpg"}
+]
