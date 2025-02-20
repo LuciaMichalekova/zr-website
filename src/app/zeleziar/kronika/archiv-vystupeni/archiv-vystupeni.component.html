@@ -1,0 +1,18 @@
+<div class="page">
+    <div class="main-title">
+        <p>ARCHÍV VYSTÚPENÍ</p>
+    </div>
+
+    <div class="content">
+        <mat-tab-group class="custom-tabs">
+            @for (tab of lotsOfTabs; track tab) {
+                <mat-tab [label]="tab">
+                    <ul>
+                        <li class="predstavenia" *ngFor="let item of datasource"><b>{{item.date}}, {{item.city}}, </b>{{item.place}}, {{item.name}}, {{item.duration}}</li>
+                    </ul>
+                </mat-tab>
+            }
+        </mat-tab-group>
+    </div>
+</div>
+

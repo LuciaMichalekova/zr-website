@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
 import { PREDSTAVENIA } from '../shared/predstavenia-mock';
+import { RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-predstavenia',
   standalone: true,
   imports: [
     NgFor,
-    MatButtonModule
+    RouterModule,
   ],
   templateUrl: './predstavenia.component.html',
   styleUrl: './predstavenia.component.scss'

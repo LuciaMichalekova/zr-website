@@ -1,0 +1,95 @@
+.page{
+    background-image: url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/symphony.png");
+    .main-title{
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        margin: 0 auto;
+        background-color: grey;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
+        background-position: center top;
+        background-attachment: fixed;
+        background-size: cover; /* Scales the image to cover the element */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+    }
+
+    .content{
+        padding: 3rem 7%;
+        .wrapper{
+            display: flex;
+            justify-content:center; 
+            align-items: center;
+            margin-bottom: 3rem;
+            .map{
+                width: 45%;
+                height: 27rem;
+                margin-right: 5%;
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                }
+            }
+              
+            .info{
+                padding: 2% 3%;
+                text-align: center;
+                background-color: white;
+                border: 5px double rgb(204, 204, 204);
+                .section{
+                    line-height: 1.0;
+                    padding: 0.1rem;
+                    .primary{
+                        font-size: xx-large;
+                        font-weight: 800;
+                    }
+                    .secondary{
+                        font-weight: bold;
+                        font-size: x-large;
+                    }
+                    .tertiary{
+                        color: rgb(100, 100, 100);
+                        font-size: large;
+                    }
+                }
+            }
+        }
+        
+        .block{
+            background-color: grey;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
+            background-attachment: fixed;
+            background-size: cover; /* Scales the image to cover the element */
+            font-size: 1.3rem;
+            color: white;
+            padding: 1rem 3%;
+            padding-bottom: 3rem;
+            .title{
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: 500;
+                background-color:  rgba(0, 0, 0, 0.60);
+                padding: 0.8rem 0rem;
+            }
+            .contacts{
+                display: flex;
+                justify-content: center;  
+                .section{
+                    padding: 0.5rem 0.5%;
+                    margin: 0 0.5%;
+                    text-align: center;
+                    line-height: 1.2;
+                    background-color:  rgba(0, 0, 0, 0.60);
+                    border-radius: 5%;
+                    min-width: 18%;
+                    p{
+                    }
+                }     
+            }
+        }
+    }
+}

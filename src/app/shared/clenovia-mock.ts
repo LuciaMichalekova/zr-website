@@ -59,10 +59,10 @@ export const SPEVACKY: Clen[] = [
 
 export const HUDOBNICI: Clen[] = [
     {name: "Filip Žiga", image:"assets/img/profile.webp"},    
+    {name: "Marek Ščurka", image:"assets/img/profile.webp"},    
     {name: "František Čech", image:"assets/img/profile.webp"},    
     {name: "Michal Dzurilla", image:"assets/img/profile.webp"},    
     {name: "Filip Kurilla", image:"assets/img/profile.webp"},    
-    {name: "Marek Ščurka", image:"assets/img/profile.webp"},    
     {name: "Margaréta Hercová", image:"assets/img/profile.webp"},    
     {name: "Jakub Ferenčák", image:"assets/img/profile.webp"},    
 ]

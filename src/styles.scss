@@ -1,11 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family:  "Merienda", serif}
+body { 
+    margin: 0; 
+    font-family:  "Merienda", serif;
+    font-size: large;
+}
 button{
     font-family: "Merienda", serif;
 }
 mat-button{
     font-family: "Merienda", serif;
 }
+
 @import '@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap" rel="stylesheet');

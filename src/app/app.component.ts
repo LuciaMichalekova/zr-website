@@ -5,7 +5,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from "./footer/footer.component";
-import { NgClass } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { NavigationEnd } from '@angular/router';
@@ -24,40 +24,51 @@ import { NavigationEnd } from '@angular/router';
     FontAwesomeModule,
     FooterComponent,
     NgClass,
+    NgIf,
+    NgFor
 ],
 })
 export class AppComponent {
   title = 'zr-website';
   scrolled = false;
   currentPath: string = '';
+  isMobile: boolean = window.innerWidth < 1200;
+  isMenuOpen: boolean = false;
+  activeSubMenu: string | null = null;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Subscribe to router events to track path changes
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(event => {
       this.currentPath = (event as NavigationEnd).urlAfterRedirects;
-
-      // Add or remove 'scrolled' class based on path
-      if (this.currentPath !== '/' ) {
-        this.scrolled = true;
-      } else {
-        this.scrolled = false;
-      }
+      (this.currentPath.includes("obsadenie-suboru")) ? this.scrolled = true : this.scrolled = false;
     });
   }
 
-
   @HostListener('window:scroll', [])
-
   onWindowScroll(): void {
-    if(window.scrollY > 300){
-      this.scrolled = true;
+    (this.currentPath.includes("obsadenie-suboru")) ? this.scrolled = true : this.scrolled = false;
+    if(this.scrolled == false){
+      (window.scrollY > 100) ? this.scrolled = true : this.scrolled = false;
     }
-    else if(this.currentPath == '/'){
-      this.scrolled = false;
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.isMobile = window.innerWidth < 1200;
+    if (!this.isMobile) {
+      this.isMenuOpen = false;
+      this.activeSubMenu = null;
     }
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleSubMenu(menu: string) {
+    this.activeSubMenu = this.activeSubMenu === menu ? null : menu;
   }
 }
