@@ -14,7 +14,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 5rem;
     }
 
     .content{
@@ -45,7 +44,8 @@
                     padding: 0.1rem;
                     .primary{
                         font-size: xx-large;
-                        font-weight: 800;
+                        font-family:  'Odana';
+                        font-weight: 600;
                     }
                     .secondary{
                         font-weight: bold;

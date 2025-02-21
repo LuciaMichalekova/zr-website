@@ -1,130 +1,5 @@
-<!-- 
-<main>
-  <nav class="navbar" [ngClass]="{'scrolled': scrolled}">
-    <div class="logo" routerLink="" routerLinkActive="active">
-        <img src="assets/img/zeleziar-logo-1019x1024-removebg-preview.png"> 
-    </div>
-
-    <div class="burger-menu"> <i class="fa-solid fa-bars"></i> </div>
-  
-    <div class="navigation">
-      <button class="button" mat-button [matMenuTriggerFor]="zeleziarMenu" style="font-family: 'Merienda', serif;"> Železiar </button>
-      <mat-menu #zeleziarMenu="matMenu">
-        
-        <button mat-menu-item routerLink="zeleziar/o-nas" routerLinkActive="active"> O nás </button>
-
-        <button mat-menu-item [matMenuTriggerFor]="obsadenieSuboru"> Obsadenie súboru </button>
-          <mat-menu #obsadenieSuboru="matMenu">
-            <button mat-menu-item routerLink="zeleziar/obsadenie-suboru/umelecke-vedenie" routerLinkActive="active">Vedenie</button>
-            <button mat-menu-item routerLink="zeleziar/obsadenie-suboru/tanecna-zlozka" routerLinkActive="active">Tanečná zložka</button>
-            <button mat-menu-item routerLink="zeleziar/obsadenie-suboru/spevacka-zlozka" routerLinkActive="active">Spevácka zložka</button>
-            <button mat-menu-item routerLink="zeleziar/obsadenie-suboru/hudobna-zlozka" routerLinkActive="active">Hudobná zložka</button>
-          </mat-menu>
-
-        <button mat-menu-item  [matMenuTriggerFor]="kronika">Kronika</button>
-        <mat-menu #kronika="matMenu">
-          <button mat-menu-item routerLink="zeleziar/kronika/osobnosti-suboru" routerLinkActive="active"> Osobnosti súboru</button>
-          <button mat-menu-item routerLink="zeleziar/kronika/archiv-vystupeni" routerLinkActive="active"> Archív vystúpení </button>
-          <button mat-menu-item routerLink="zeleziar/kronika/archiv-premier" routerLinkActive="active"> Premiéry </button>
-          <button mat-menu-item routerLink="" routerLinkActive="active"> Repertoár ? </button>
-          <button mat-menu-item routerLink="" routerLinkActive="active"> Výročia ? </button>
-          <button mat-menu-item routerLink="zeleziar/kronika/ocenenia" routerLinkActive="active"> Ocenenia</button>
-          <button mat-menu-item routerLink="zeleziar/kronika/maraton-tanca" routerLinkActive="active"> Maratón tanca</button>
-        </mat-menu>    
-
-        <button mat-menu-item [matMenuTriggerFor]="galeriaMenu">Galéria</button>
-        <mat-menu #galeriaMenu="matMenu">
-          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">2024</button>
-          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">2023</button>
-          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">2022</button>
-          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">2021</button>
-          <button mat-menu-item routerLink="zeleziar/galeria" routerLinkActive="active">Archív</button>
-        </mat-menu>
-      </mat-menu>
-  
-      <button mat-button class="button" routerLink="aktuality" routerLinkActive="active" style="font-family: 'Merienda', serif;">Aktuality</button>
-  
-      <button mat-button class="button" routerLink="predstavenia" routerLinkActive="active" style="font-family: 'Merienda', serif;">Predstavenia</button>
-  
-      <button mat-button class="button" [matMenuTriggerFor]="belowMenu" style="font-family: 'Merienda', serif;">Ponúkame</button>
-      <mat-menu #belowMenu="matMenu">
-        <button mat-menu-item routerLink="ponukame/aktualne-programy" routerLinkActive="active"> Aktuálne programy </button>
-        <button mat-menu-item routerLink="ponukame/kurz-ludovych-tancov" routerLinkActive="active"> Kurz ľudových tancov </button>
-        <button mat-menu-item routerLink="ponukame/pozicovna-krojov" routerLinkActive="active"> Požičovňa krojov </button>
-        <button mat-menu-item routerLink="ponukame/cepenie" routerLinkActive="active"> Svadobné čepenie </button>
-        <button mat-menu-item routerLink="ponukame/produkty" routerLinkActive="active"> Produkty </button>
-      </mat-menu>
-      
-      <button mat-button class="button" routerLink="kontakty" routerLinkActive="active" style="font-family: 'Merienda', serif;">Kontakty</button>
-    </div>
-  
-    <div class="social-media">
-      <i class="fab fa-instagram" style="margin-right: 1rem;"></i>
-      <i class="fab fa-facebook-square" style="margin: 0 1rem"></i>
-      <i class="fab fa-spotify" style="margin: 0 1rem"></i>
-      <i class="fab fa-youtube" style="margin-left: 1rem"></i>
-    </div>
-  </nav> 
-</main> -->
-
-<!-- **************************************************TU********************************************** -->
 
 <main>
-  <!-- <nav class="navbar" [ngClass]="{'scrolled': scrolled}">
-    <div class="logo" routerLink="/" routerLinkActive="active">
-      <img src="assets/img/zeleziar-logo-1019x1024-removebg-preview.png">
-    </div>
-    
-    <ul [class.open]="isMenuOpen || !isMobile" class="menu">
-      <li (mouseover)="!isMobile ? activeSubMenu = 'zeleziar' : null" 
-          (mouseleave)="!isMobile ? activeSubMenu = null : null">
-
-        <a (click)="isMobile ? toggleSubMenu('zeleziar') : null"> Železiar </a>
-        
-        <ul class="sub-menu" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
-          <li> O nás </li> 
-          <li> Obsadenie súboru </li> 
-          <li> Kronika </li> 
-          <li> Galéria </li> 
-        </ul>
-      </li>
-
-      <li routerLink="aktuality" routerLinkActive="active"> Aktuality </li>
-      
-      <li routerLink="predstavenia" routerLinkActive="active"> Predstavenia </li>
-
-      <li (mouseover)="!isMobile ? activeSubMenu = 'ponukame' : null" 
-          (mouseleave)="!isMobile ? activeSubMenu = null : null">
-        
-        <a (click)="isMobile ? toggleSubMenu('ponukame') : null"> Ponúkame </a>
-        
-        <ul class="sub-menu" *ngIf="activeSubMenu === 'ponukame' || (!isMobile && activeSubMenu === 'ponukame')">          
-          <li routerLink="ponukame/aktualne-programy" routerLinkActive="active"> Aktuálne programy </li> 
-          <li routerLink="ponukame/kurz-ludovych-tancov" routerLinkActive="active"> Kurz ľudových tancov </li> 
-          <li routerLink="ponukame/pozicovna-krojov" routerLinkActive="active"> Požičovňa krojov </li> 
-          <li routerLink="ponukame/cepenie" routerLinkActive="active"> Svadobné čepenie </li> 
-          <li routerLink="ponukame/produkty" routerLinkActive="active"> Produkty </li> 
-        </ul>
-      </li>
-      
-      <li routerLink="kontakty" routerLinkActive="active">Kontakty</li>
-      </ul> 
-
-      <div class="social-media">
-        <i class="fab fa-instagram" style="margin-right: 1rem;"></i>
-        <i class="fab fa-facebook-square" style="margin: 0 1rem"></i>
-        <i class="fab fa-spotify" style="margin: 0 1rem"></i>
-        <i class="fab fa-youtube" style="margin-left: 1rem"></i>
-      </div>
-      
-    <div class="burger-menu">
-      <i class="fa-solid" [ngClass]="{'fa-bars': !isMenuOpen, 'fa-times': isMenuOpen}" (click)="toggleMenu()"></i> 
-    </div>
-  </nav>
-
-  <router-outlet></router-outlet>
-  <app-footer></app-footer> -->
-  
   <nav class="navbar" [ngClass]="{'scrolled': scrolled}">
     <div class="logo" routerLink="/" routerLinkActive="active">
       <img src="assets/img/zeleziar-logo-1019x1024-removebg-preview.png">
@@ -141,16 +16,28 @@
         
           <ul class="submenu" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
             <li routerLink="zeleziar/o-nas" routerLinkActive="active"> O nás </li> 
-            <li> Obsadenie súboru 
-              <ul class="subsubmenu1" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
+
+            <li           
+              (mouseover)="!isMobile ? activeSubSubMenu = 'obsadenie' : null" 
+              (mouseleave)="!isMobile ? activeSubSubMenu = null : null">
+
+              <a (click)="isMobile ? toggleSubSubMenu('obsadenie') : null"> Obsadenie súboru </a> 
+
+              <ul class="subsubmenu" *ngIf="activeSubSubMenu === 'obsadenie' || (!isMobile && activeSubSubMenu === 'obsadenie')">
                 <li routerLink="zeleziar/obsadenie-suboru/umelecke-vedenie" routerLinkActive="active">Vedenie</li>
                 <li routerLink="zeleziar/obsadenie-suboru/tanecna-zlozka" routerLinkActive="active">Tanečná zložka</li>
                 <li routerLink="zeleziar/obsadenie-suboru/spevacka-zlozka" routerLinkActive="active">Spevácka zložka</li>
                 <li routerLink="zeleziar/obsadenie-suboru/hudobna-zlozka" routerLinkActive="active">Hudobná zložka</li>             
               </ul>
             </li> 
-            <li> Kronika 
-              <ul class="subsubmenu2" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
+
+            <li              
+              (mouseover)="!isMobile ? activeSubSubMenu = 'kronika' : null" 
+              (mouseleave)="!isMobile ? activeSubSubMenu = null : null">
+
+              <a (click)="isMobile ? toggleSubSubMenu('kronika') : null"> Kronika </a> 
+
+              <ul class="subsubmenu" *ngIf="activeSubSubMenu === 'kronika' || (!isMobile && activeSubSubMenu === 'kronika')">
                 <li routerLink="zeleziar/kronika/osobnosti-suboru" routerLinkActive="active"> Osobnosti súboru</li>
                 <li routerLink="zeleziar/kronika/archiv-vystupeni" routerLinkActive="active"> Archív vystúpení </li>
                 <li routerLink="zeleziar/kronika/archiv-premier" routerLinkActive="active"> Premiéry </li>
@@ -160,8 +47,14 @@
                 <li routerLink="zeleziar/kronika/maraton-tanca" routerLinkActive="active"> Maratón tanca</li>            
               </ul>
             </li> 
-            <li> Galéria 
-              <ul class="subsubmenu3" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
+
+            <li
+              (mouseover)="!isMobile ? activeSubSubMenu = 'galeria' : null" 
+              (mouseleave)="!isMobile ? activeSubSubMenu = null : null">
+
+              <a (click)="isMobile ? toggleSubSubMenu('galeria') : null"> Galéria </a> 
+
+              <ul class="subsubmenu" *ngIf="activeSubSubMenu === 'galeria' || (!isMobile && activeSubSubMenu === 'galeria')">
                 <li routerLink="zeleziar/galeria" routerLinkActive="active">2024</li>
                 <li routerLink="zeleziar/galeria" routerLinkActive="active">2023</li>
                 <li routerLink="zeleziar/galeria" routerLinkActive="active">2022</li>
@@ -172,15 +65,15 @@
           </ul>
         </li>
         
-        <hr>
+        <!-- <hr> -->
   
         <li> <a routerLink="aktuality" routerLinkActive="active"> Aktuality </a> </li>
         
-        <hr>
+        <!-- <hr> -->
         
         <li> <a routerLink="predstavenia" routerLinkActive="active"> Predstavenia </a> </li>
         
-        <hr>
+        <!-- <hr> -->
         
         <li 
           (mouseover)="!isMobile ? activeSubMenu = 'ponukame' : null" 
@@ -197,11 +90,11 @@
           </ul>
         </li>
         
-        <hr>
+        <!-- <hr> -->
   
         <li> <a routerLink="kontakty" routerLinkActive="active"> Kontakty </a> </li>
   
-        <hr>
+        <!-- <hr> -->
       </div>
 
       <span [class.open]="isMenuOpen || !isMobile" class="social-media">

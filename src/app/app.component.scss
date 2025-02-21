@@ -10,6 +10,8 @@
   box-sizing: border-box;
   padding: 0.2rem 5%;
   font-size: 1.3rem;
+  font-weight: 500;
+  font-family:  'Odana';
   &.scrolled {
     background-color: white !important;
     color: black !important;
@@ -22,6 +24,9 @@
         }
         .submenu{
           color: white !important;
+          a{
+            color: white !important;
+          }
         }
       } 
       .menu-burger{
@@ -46,6 +51,7 @@
     cursor: pointer;
     color: white;
   }
+
   .menu {
     width: 80%;
     list-style: none;
@@ -56,12 +62,9 @@
     div{
       display: flex;
       flex-direction: row;
-      hr{
-        display: none;
-      }
       li {
         position: relative;
-        padding: 10px 20px;
+        padding: 0.5rem 1rem;
         a {
           color: white;
           text-decoration: none;
@@ -71,44 +74,27 @@
           list-style: none;
           position: absolute;
           font-size: 1rem;
-          left: 0;
-          top: 100%;
           background: black;
+          padding: 0.5rem;
+          margin-top: 0.5rem;
           display: none;
-          padding: 10px;
           z-index: 10;
-          transition: max-height 200ms ease-out, opacity 200ms ease-out;
-          .subsubmenu1{
-            list-style: none;
-            position: absolute;
-            background-color: black;
-            padding: 0;
-            left: 110%;
-            top: 0%;
-          }          
-          .subsubmenu2{
-            list-style: none;
-            position: absolute;
-            background-color: black;
-            padding: 0;
-            left: 200%;
-            top: 0%;
-          }          
-          .subsubmenu3{
-            list-style: none;
-            position: absolute;
-            background-color: black;
-            padding: 0;
-            left: 300%;
-            top: 0%;
-          }
+          min-width: 12rem;
           li {
-            padding: 5px 10px;
             cursor: pointer;
           }
+          .subsubmenu{
+            list-style: none;
+            position: absolute;
+            background-color: black;
+            padding: 0.5rem;
+            left: 100%;
+            top: 0;
+          }          
         }
         &:hover .submenu {
-          display: block;
+          display: flex;
+          flex-direction: column;
         }
       }
     }
@@ -180,8 +166,22 @@
           align-items: center;
           .submenu {
             position: static;
+            min-width: none;
             display: block;
             z-index: 0;
+            color: rgb(150, 150, 150);
+            margin: 0.5rem;
+            a{
+              color: rgb(150, 150, 150);
+            }
+            .subsubmenu{
+              position: static;
+              display: block;
+              color: white;
+              font-size: 0.9rem;
+              margin-top: 0.3rem;
+              z-index: 0; 
+            }
           }
         }
       }

@@ -35,6 +35,7 @@ export class AppComponent {
   isMobile: boolean = window.innerWidth < 1200;
   isMenuOpen: boolean = false;
   activeSubMenu: string | null = null;
+  activeSubSubMenu: string | null = null;
 
   constructor(private router: Router) {}
 
@@ -42,8 +43,11 @@ export class AppComponent {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(event => {
+      this.isMenuOpen = false;
+      this.activeSubMenu = null;
+      this.activeSubSubMenu = null;
       this.currentPath = (event as NavigationEnd).urlAfterRedirects;
-      (this.currentPath.includes("obsadenie-suboru")) ? this.scrolled = true : this.scrolled = false;
+      this.currentPath.includes("obsadenie-suboru") ? this.scrolled = true : this.scrolled = false;
     });
   }
 
@@ -61,6 +65,7 @@ export class AppComponent {
     if (!this.isMobile) {
       this.isMenuOpen = false;
       this.activeSubMenu = null;
+      this.activeSubSubMenu = null;
     }
   }
 
@@ -70,5 +75,9 @@ export class AppComponent {
 
   toggleSubMenu(menu: string) {
     this.activeSubMenu = this.activeSubMenu === menu ? null : menu;
+  }
+
+  toggleSubSubMenu(menu: string) {
+    this.activeSubSubMenu = this.activeSubSubMenu === menu ? null : menu;
   }
 }
