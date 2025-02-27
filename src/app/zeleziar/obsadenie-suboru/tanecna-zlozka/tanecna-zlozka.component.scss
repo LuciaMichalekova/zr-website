@@ -1,11 +1,13 @@
 .title{
     position: relative;
+    font-family: 'Odana';
     display: flex;
     padding-top: 10rem;
     padding-bottom: 1rem;
-    justify-content: center; /* Centers text horizontally */
-    align-items: center; /* Centers text vertically */
-    font-size: xx-large;
+    justify-content: center;
+    align-items: center; 
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 .content{
@@ -14,6 +16,12 @@
         padding: 1rem;
         .container{
             text-align: center;
+            .subtitle{
+                font-weight: 500;
+                font-family: 'Odana';
+                font-size: 1.5rem;
+                margin: 0;
+            }
         }
     }
 
@@ -32,11 +40,13 @@
             }
             .name{
                 position: absolute; 
-                background: rgba(0, 0, 0, 0.5); 
+                background: rgba(0, 0, 0, 0.7); 
+                font-family: 'Odana';
+                font-size: 1.2rem;
                 color: white; 
                 bottom: 2.5rem;
-                text-align: 
-                center; padding: 10px;
+                text-align: center; 
+                padding: 0.5rem;
             }
         }
     }

@@ -13,8 +13,9 @@
   font-weight: 500;
   font-family:  'Odana';
   &.scrolled {
-    background-color: white !important;
+    background-color: white!important;
     color: black !important;
+    font-weight: 600;
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.21);
     transition: 200ms ease-in-out;
     .menu{
@@ -24,8 +25,10 @@
         }
         .submenu{
           color: white !important;
+          font-weight: 500;
           a{
             color: white !important;
+            font-weight: 500;
           }
         }
       } 
@@ -73,8 +76,9 @@
         .submenu {
           list-style: none;
           position: absolute;
-          font-size: 1rem;
+          font-size: 1.2rem;
           background: black;
+          box-shadow: -2px -2px 2px rgb(222, 222, 222);
           padding: 0.5rem;
           margin-top: 0.5rem;
           display: none;
@@ -86,10 +90,13 @@
           .subsubmenu{
             list-style: none;
             position: absolute;
-            background-color: black;
+            background-color: grey;
+            box-shadow: -2px -2px 2px rgb(222, 222, 222);
+            color: white;
+            min-width: 12rem;
             padding: 0.5rem;
             left: 100%;
-            top: 0;
+            top: -0.5rem;
           }          
         }
         &:hover .submenu {

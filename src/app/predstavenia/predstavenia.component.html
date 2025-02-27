@@ -1,58 +1,38 @@
 <div class="main-title">
-    <p class="title">PREDSTAVENIA</p>
+    <p class="title">Predstavenia</p>
 </div>
 
 <div class="content">
-    <p class="title"> Aktuálne predstavenia </p>
+    <p class="title"> Nadchádzajúce predstavenia </p>
 
     <div class="container" *ngFor="let item of dataSource">
-        <div class="info">
-            <p class="primary">{{item.date}}</p>
-            <p class="secondary">{{item.city}}</p>
-            <p class="tertiary">{{item.time}}</p>
-        </div>
-        
-        <div class ="info">
-            <p class="primary">{{item.name}}</p>
-            <p class="tertiary">{{item.info}}</p>
-        </div>
-        
-        <div class="info">
-            <p class="tertiary"><i class="fa-regular fa-clock"></i> {{item.duration}}</p>
-            <p class="tertiary"><i class="fa-solid fa-location-dot"></i> {{item.place}}, {{item.city}}</p>
-            <p class="tertiary"></p>
-        </div>
-        <button> Kúpiť vstupenku </button>
+        <div class="wrapper">
+            <div class="info">
+                <p class="primary">{{item.date}}</p>
+                <p class="secondary">{{item.city}}</p>
+                <p class="tertiary">{{item.time}}</p>
+            </div>
+            
+            <div class ="info">
+                <p class="primary">{{item.name}}</p>
+                <p class="tertiary">{{item.info}}</p>
+            </div>
+            
+            <div class="info">
+                <p class="tertiary"><i class="fa-regular fa-clock"></i> {{item.duration}}</p>
+                <p class="tertiary"><i class="fa-solid fa-location-dot"></i> {{item.place}}, {{item.city}}</p>
+                <p class="tertiary"></p>
+            </div>
 
-        <hr>
-    </div>
-
-    <p class="title"> Odohraté predstavenia </p>
-
-    <div class="container" *ngFor="let item of dataSource">
-        <div class="info">
-            <p class="primary">{{item.date}}</p>
-            <p class="secondary">{{item.city}}</p>
-            <p class="tertiary">{{item.time}}</p>
-        </div>
-        
-        <div class ="info">
-            <p class="primary">{{item.name}}</p>
-            <p class="tertiary">{{item.info}}</p>
-        </div>
-        
-        <div class="info">
-            <p class="tertiary"><i class="fa-regular fa-clock"></i> {{item.duration}}</p>
-            <p class="tertiary"><i class="fa-solid fa-location-dot"></i> {{item.place}}, {{item.city}}</p>
-            <p class="tertiary"></p>
+            <button> 
+                <p> Kúpiť vstupenku </p>
+            </button>
         </div>
 
         <hr>
     </div>
 
-    <div class="container2">
-        <div class="element2 clickable" [routerLink]="['/zeleziar/kronika/archiv-vystupeni']" routerLinkActive="router-link-active" >
-            <p class="element2-primary"> ARCHÍV VYSTÚPENÍ </p>
-        </div>
-    </div>
+    <button class="button-round">
+        <p [routerLink]="['/zeleziar/kronika/archiv-vystupeni']" routerLinkActive="router-link-active"> Archív vystúpení </p>
+    </button>
 </div>

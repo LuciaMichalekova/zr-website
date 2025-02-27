@@ -9,14 +9,15 @@
     <ul class="menu" [class.open]="isMenuOpen || !isMobile">
       <div>
         <li
-          (mouseover)="!isMobile ? activeSubMenu = 'zeleziar' : null" 
-          (mouseleave)="!isMobile ? activeSubMenu = null : null">
-          
-          <a (click)="isMobile ? toggleSubMenu('zeleziar') : null"> Železiar </a>
+        (mouseover)="!isMobile ? activeSubMenu = 'zeleziar' : null" 
+        (mouseleave)="!isMobile ? activeSubMenu = null : null">
         
-          <ul class="submenu" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
+        <a (click)="isMobile ? toggleSubMenu('zeleziar') : null"> Železiar </a>
+        
+        <ul class="submenu" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
+            
             <li routerLink="zeleziar/o-nas" routerLinkActive="active"> O nás </li> 
-
+            
             <li           
               (mouseover)="!isMobile ? activeSubSubMenu = 'obsadenie' : null" 
               (mouseleave)="!isMobile ? activeSubSubMenu = null : null">
