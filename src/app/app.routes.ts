@@ -32,7 +32,7 @@ export const routes: Routes = [
     { path: 'predstavenia', component: PredstaveniaComponent},
     { path: 'zeleziar/o-nas', component: ONasComponent},
     { path: 'zeleziar/kronika/archiv-premier', component: ArchivPremierComponent},
-    { path: 'zeleziar/kronika/maration-tanca', component: MaratonTancaComponent},
+    { path: 'zeleziar/kronika/maraton-tanca', component: MaratonTancaComponent},
     { path: 'zeleziar/kronika/osobnosti-suboru', component: OsobnostiSuboruComponent},
     { path: 'zeleziar/kronika/archiv-vystupeni', component: ArchivVystupeniComponent},
     { path: 'zeleziar/kronika/ocenenia', component: OceneniaComponent},

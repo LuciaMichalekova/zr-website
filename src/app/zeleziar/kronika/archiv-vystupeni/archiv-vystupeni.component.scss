@@ -1,4 +1,5 @@
 .page{
+    background-image: url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/symphony.png");
     .main-title{
         position: relative;
         width: 100%;
@@ -12,16 +13,18 @@
         display: flex;
         justify-content: center; /* Centers text horizontally */
         align-items: center; /* Centers text vertically */
-        font-size: xxx-large;
     }
 
     .content{
-        padding: 2rem 10rem;
-        background-image: url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/symphony.png");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0rem;
         mat-tab-group{
+            width: 80%;
             background-color: white;
             border: 5px double rgb(204, 204, 204);
-            padding: 2rem;
+            padding: 1rem;
             ul{
                 padding: 0rem 3.5rem;
                 li{

@@ -9,14 +9,15 @@
     <ul class="menu" [class.open]="isMenuOpen || !isMobile">
       <div>
         <li
-          (mouseover)="!isMobile ? activeSubMenu = 'zeleziar' : null" 
-          (mouseleave)="!isMobile ? activeSubMenu = null : null">
-          
-          <a (click)="isMobile ? toggleSubMenu('zeleziar') : null"> Železiar </a>
+        (mouseover)="!isMobile ? activeSubMenu = 'zeleziar' : null" 
+        (mouseleave)="!isMobile ? activeSubMenu = null : null">
         
-          <ul class="submenu" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
+        <a (click)="isMobile ? toggleSubMenu('zeleziar') : null"> Železiar </a>
+        
+        <ul class="submenu" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
+            
             <li routerLink="zeleziar/o-nas" routerLinkActive="active"> O nás </li> 
-
+            
             <li           
               (mouseover)="!isMobile ? activeSubSubMenu = 'obsadenie' : null" 
               (mouseleave)="!isMobile ? activeSubSubMenu = null : null">
@@ -41,8 +42,8 @@
                 <li routerLink="zeleziar/kronika/osobnosti-suboru" routerLinkActive="active"> Osobnosti súboru</li>
                 <li routerLink="zeleziar/kronika/archiv-vystupeni" routerLinkActive="active"> Archív vystúpení </li>
                 <li routerLink="zeleziar/kronika/archiv-premier" routerLinkActive="active"> Premiéry </li>
-                <li routerLink="" routerLinkActive="active"> Repertoár ? </li>
-                <li routerLink="" routerLinkActive="active"> Výročia ? </li>
+                <!-- <li routerLink="" routerLinkActive="active"> Repertoár ? </li>
+                <li routerLink="" routerLinkActive="active"> Výročia ? </li> -->
                 <li routerLink="zeleziar/kronika/ocenenia" routerLinkActive="active"> Ocenenia</li>
                 <li routerLink="zeleziar/kronika/maraton-tanca" routerLinkActive="active"> Maratón tanca</li>            
               </ul>
