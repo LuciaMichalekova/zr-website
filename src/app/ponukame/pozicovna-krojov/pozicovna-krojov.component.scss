@@ -1,5 +1,4 @@
 .page{
-    background-image: url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/symphony.png");
     .main-title{
         position: relative;
         width: 100%;
@@ -10,9 +9,10 @@
         filter: brightness(1.2);
         background-position: center bottom;
         background-attachment: fixed;
-        background-size: cover; /* Scales the image to cover the element */
+        background-size: cover;
         color: white;
         display: flex;
+        text-align: center;
         justify-content: center;
         align-items: center;
     }
@@ -21,63 +21,63 @@
         .wrapper{
             padding: 3rem 0;
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             .info{
                 padding: 1% 3%;
                 text-align: center;
                 background-color: white;
-                border: 5px double rgb(204, 204, 204);
                 text-align: center;
-                max-width: 30%;
+                width: 30%;
                 .section{
                     padding: 0.1rem;
                     .primary{
-                        font-size: xx-large;
+                        font-family: 'Odana';
+                        font-size: 2rem;
                         font-weight: 800;
                     }
                     .secondary{
-                        font-weight: bold;
-                        font-size: x-large;
+                        font-size: 1.3rem;
                     }
                     .tertiary{
                         color: rgb(100, 100, 100);
-                        font-size: large;
                     }
                 }   
             }
             img{
-                width: 25%;
-                margin: 1rem;
+                width: 23rem;
                 border-radius: 50%;
                 padding: 0.3rem;
                 border: 5px dotted rgb(200, 200, 200);
             }
             .block{
-                background-color: grey;
                 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/bg/BI4F9263.jpg");
                 filter: contrast(1.1) brightness(1.2);
+                background-color: grey;
                 background-position: center bottom;
                 background-attachment: fixed;
                 background-size: cover;
                 margin-left: 3rem;
                 color: white;
-                font-size: 1.3rem;
+                display: flex;
+                flex-direction: column;
                 width: 40%;
                 padding: 0rem 2rem;
                 padding-bottom: 2rem;
                 .title{
                     text-align: center;
-                    font-size: xx-large;
-                    font-weight: 500;
+                    font-family: 'Odana';
+                    font-size: 2rem;
                     background-color:  rgba(0, 0, 0, 0.60);
-                    padding: 0.8rem 0rem;
+                    padding: 1rem;
                     margin-left: 0.5rem;
                     margin-right: 0.5rem;
                 }
 
-                .contacts{
+                .section{
                     display: flex;
+                    flex-direction: row;
                     justify-content: center; 
                     align-items: center; 
                     line-height: 1.0;
@@ -86,22 +86,20 @@
                         margin: 0 0.5%;
                         text-align: center;
                         background-color:  rgba(0, 0, 0, 0.60);
-                        border-radius: 5%;
                         min-width: 30%;
                         min-height: 10rem;
-                    } 
-                    .flex{
                         display: flex;
+                        flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        line-height: 1.5;
-                    }    
+                        line-height: 2;
+                    } 
                 }    
             }
             .container2{
                 display: flex;
                 justify-content: center;
-                padding: 1rem 0rem;
+                margin: 0;
                 .element2{
                     display: flex;
                     align-items: center; 
@@ -134,7 +132,6 @@
             padding: 1rem;
             border-top:  1px solid rgb(204, 204, 204);
             border-bottom:  1px solid rgb(204, 204, 204);
-            line-height: 1.0;
             font-size: large;
             .primary{
                 font-size: x-large;
@@ -157,13 +154,20 @@
         }
         .gallery{
             text-align: center;
-            padding: 2rem 8rem;
             border-top:  1px solid rgb(204, 204, 204);
+            background-color: rgb(240, 240, 240);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .photos{
+                margin: 2rem;
                 border: 5px double rgb(204, 204, 204);
+                width: 80%;
                 .title{
-                    font-size: xxx-large;
-                    font-weight: 800;
+                    font-size: 3rem;
+                    font-weight: 600;
+                    margin: 1rem;
+                    font-family: 'Odana';
                 }
                 .photo{
                     text-align: center;
@@ -206,7 +210,7 @@
             z-index: 100;
             img{
                 padding-top: 7%;
-                height: 80%;
+                width: 25%;
                 
             }
             .action{
@@ -215,10 +219,10 @@
                 border: none;
                 cursor: pointer;
                 border-radius: 50%;
-                font-size: x-large;
                 padding: 0.5rem 0.7rem;
                 transition: 500ms ease-in-out;
                 margin: 0.5rem;
+                font-size: 1.5rem;
             }
             .action:hover{
                 background-color: rgba(0, 0, 0, 0.4);
@@ -228,8 +232,8 @@
                 position: absolute;
                 top:15%;
                 right: 5%;
+                font-size: 2rem;
                 padding: 0 0.8rem;
-                font-size: xx-large;
             }
             .slider-left{
                 top:50%;
@@ -241,4 +245,46 @@
             }
         }
     }    
+}
+
+@media(max-width: 800px){
+    .page{
+        .content{
+            .wrapper{
+                flex-direction: column;
+                .info{
+                    width: 80%;
+                    margin-bottom: 3rem;
+                }
+                img{
+                    width: 20rem;
+                }
+                .block{
+                    width: 80%;
+                    margin-left: 0;
+                    .section{
+                        flex-direction: column;
+                        .contact{
+                            margin: 0.5rem 0rem;
+                            width: 90%;
+                        } 
+                    }
+                }
+            }
+            .gallery{
+              .photos{
+                    .title{
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .imageWrapper{
+                img{
+                    padding-top: 10%;
+                    width: 60%;
+                    height: fit-content;
+                }
+            }
+        }
+    }
 }

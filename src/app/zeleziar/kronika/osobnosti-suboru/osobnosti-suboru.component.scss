@@ -16,6 +16,12 @@
     }
 
     .content{
+        //TODO: ZMAZAT
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        //
         .section{
             padding-top: 1rem;
             padding-bottom:5rem;

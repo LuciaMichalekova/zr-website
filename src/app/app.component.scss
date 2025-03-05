@@ -53,6 +53,7 @@
     font-size: 2rem;
     cursor: pointer;
     color: white;
+    margin-right: 1rem;
   }
 
   .menu {
@@ -78,7 +79,6 @@
           position: absolute;
           font-size: 1.2rem;
           background: black;
-          box-shadow: -2px -2px 2px rgb(222, 222, 222);
           padding: 0.5rem;
           margin-top: 0.5rem;
           display: none;
@@ -184,8 +184,10 @@
             .subsubmenu{
               position: static;
               display: block;
+              background-color: black;
+              box-shadow: none;
               color: white;
-              font-size: 0.9rem;
+              font-size: 1rem;
               margin-top: 0.3rem;
               z-index: 0; 
             }

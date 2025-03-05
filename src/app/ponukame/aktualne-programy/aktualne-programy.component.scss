@@ -16,6 +16,12 @@
     }
 
     .content{
+        //TODO: odstranit
+        display: flex;
+        height: 20vh;
+        align-items: center;
+        justify-content: center;
+        //az sem
         .section{
             padding-top: 1rem;
             padding-bottom:5rem;
