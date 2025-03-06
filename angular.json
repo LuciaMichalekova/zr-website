@@ -18,7 +18,8 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/zr-website",
-            "baseHref": "./",
+            "baseHref": "./zr-website/",
+            "deployUrl": "https://luciamichalekova.github.io/zr-website/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
