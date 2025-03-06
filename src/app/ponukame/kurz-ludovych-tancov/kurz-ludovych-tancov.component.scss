@@ -4,7 +4,7 @@
         width: 100%;
         height: 80vh;
         background-color: grey;
-        // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/bg/IMG_0505.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/IMG_0505.jpg");
         filter: contrast(1.15) brightness(1.1);
         background-attachment: fixed;
         background-size: cover;
@@ -66,7 +66,7 @@
                     text-align: center;
                     width: 25%;
                     background-color: grey;
-                    // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/bg/334277273_1326034581306574_5098482351838506347_n.jpg");
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/bg/334277273_1326034581306574_5098482351838506347_n.jpg");
                     filter: contrast(1.1) saturate(1.15);                     
                     background-attachment: fixed;
                     background-size: cover; /* Scales the image to cover the element */
@@ -104,7 +104,7 @@
                     height: 10rem;
                     border-radius: 50%; /* Makes it a circle */
                     background-color: grey;
-                    // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/bg/IMG_5186.JPG");
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/bg/IMG_5186.JPG");
                     filter: contrast(1.1) saturate(1.15); ; 
                     background-attachment: fixed;
                     background-size: cover; /* Scales the image to cover the element */
@@ -124,7 +124,7 @@
             }
         }
         .section-bg{
-            // background-image: url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/symphony.png");
+            background-image: url("/assets/img/symphony.png");
         }
         .clickable{
             cursor: pointer;

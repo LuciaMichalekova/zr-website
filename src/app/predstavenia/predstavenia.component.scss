@@ -3,7 +3,7 @@
   width: 100%;
   height: 80vh;
   margin: 0 auto;
-  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
   background-attachment: fixed;
   background-size: cover;
   color: white;
@@ -78,7 +78,7 @@
   
     button {
       padding: 1rem;
-      // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
       background-attachment: fixed;; /* Bootstrap blue */
       background-size: cover; /* Scales the image to cover the element */
       border-color: black;
@@ -90,11 +90,11 @@
         margin: 0;
       }
       &:hover {
-        // background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
         transition: ease-in-out;
       }
       &:active{
-        // background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
         transition: ease-in-out;          
       }
     }
@@ -115,7 +115,7 @@
     width: 10rem;  
     height: 10rem;
     border-radius: 50%;
-    // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("C:/Users/z004va3y/Documents/zr-website/src/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
     background-attachment: fixed;
     background-size: cover;
     color: white;
