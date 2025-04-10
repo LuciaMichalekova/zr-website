@@ -53,4 +53,14 @@ export class HomeComponent {
 
   dataSource1 = PREDSTAVENIA;
   dataSource2 = AKTUALITY;
+
+  scrolll(){
+    var left = document.querySelector(".scroll-images");
+    left?.scrollBy(-500, 0);
+  }
+
+  scrollr(){
+    var left = document.querySelector(".scroll-images");
+    left?.scrollBy(500, 0);
+  }
 }

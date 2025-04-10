@@ -2,13 +2,21 @@
     position: relative;
     font-family: 'Odana';
     display: flex;
-    padding-top: 10rem;
-    padding-bottom: 1rem;
     justify-content: center;
     align-items: center; 
+    padding-top: 10rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
+    color: navy;
+    img{
+        margin:0rem;
+        width: 4rem;
+    }
+    span{
+        margin: 0rem 1rem;
+    }
+
 }
 
 .content{
@@ -18,10 +26,11 @@
         .container{
             text-align: center;
             .subtitle{
-                font-weight: 500;
-                font-family: 'Odana';
-                font-size: 1.5rem;
                 margin: 0;
+                font-weight: 500;
+                font-size: 2rem;
+                color: rgb(180, 0, 0);
+                font-family: 'Odana'; 
             }
         }
     }
