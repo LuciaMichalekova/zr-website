@@ -1,38 +1,60 @@
-<div class="main-title">
-    <p class="title">Predstavenia</p>
-</div>
-
 <div class="content">
-    <p class="title"> Nadchádzajúce predstavenia </p>
-
-    <div class="container" *ngFor="let item of dataSource">
-        <div class="wrapper">
-            <div class="info">
-                <p class="primary">{{item.date}}</p>
-                <p class="secondary">{{item.city}}</p>
-                <p class="tertiary">{{item.time}}</p>
-            </div>
-            
-            <div class ="info">
-                <p class="primary">{{item.name}}</p>
-                <p class="tertiary">{{item.info}}</p>
-            </div>
-            
-            <div class="info">
-                <p class="tertiary"><i class="fa-regular fa-clock"></i> {{item.duration}}</p>
-                <p class="tertiary"><i class="fa-solid fa-location-dot"></i> {{item.place}}, {{item.city}}</p>
-                <p class="tertiary"></p>
-            </div>
-
-            <button> 
-                <p> Kúpiť vstupenku </p>
-            </button>
-        </div>
-
-        <hr>
+    <div class="main-title">
+        <p class="title">Predstavenia</p>
     </div>
 
-    <button class="button-round">
-        <p [routerLink]="['/zeleziar/kronika/archiv-vystupeni']" routerLinkActive="router-link-active"> Archív vystúpení </p>
-    </button>
+    <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <h1 class="title">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Nadchádzajúce predstavenia</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container" *ngFor="let item of dataSource">
+            <div class="wrapper">
+                <div class="info">
+                    <p class="primary">{{item.date}}</p>
+                    <p class="secondary">{{item.city}}</p>
+                    <p class="tertiary">{{item.time}}</p>
+                </div>
+                
+                <div class ="info">
+                    <p class="primary">{{item.name}}</p>
+                    <p class="tertiary">{{item.info}}</p>
+                </div>
+                
+                <div class="info">
+                    <p *ngIf="item.duration" class="tertiary"><i class="fa-regular fa-clock"></i> {{item.duration}}</p>
+                    <p class="tertiary"><i *ngIf="item.place || item.city" class="fa-solid fa-location-dot"></i><span *ngIf="item.place"> {{item.place}},</span> {{item.city}}</p>
+                </div>
+
+                <button class="button" *ngIf="item.tickets && item.tickets !== ''"> 
+                <a [href]="item.tickets" target="_blank">Kúpiť vstupenku</a>
+                </button>
+
+                <button class="special" *ngIf="item.free"> 
+                <a>Vstup zdarma</a>
+                </button>
+
+                <button class="special" *ngIf="item.ticketsOnPlace"> 
+                <a>Vstupenky na mieste</a>
+                </button>
+
+                <button class="disabled" *ngIf="(!item.tickets || item.tickets.trim() === '') && !item.free && !item.ticketsOnPlace"> 
+                <a>Kúpiť vstupenku</a>
+                </button>
+            </div>
+
+            <hr>
+        </div>
+
+        <button class="button-round">
+            <p [routerLink]="['/archiv-vystupeni']" routerLinkActive="router-link-active"> Archív vystúpení </p>
+        </button>
+    </div>
 </div>

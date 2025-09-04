@@ -1,0 +1,203 @@
+.content{
+    .section{
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        .background{
+            .background-image-1{
+                position: absolute;
+                top: 5vh;     /* adjust as needed */
+                left: 3rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 40vw;   /* or any size you want */
+                opacity: 0.2;   /* optional, to fade it behind text */
+            }
+    
+            .background-image-2{
+                position: absolute;
+                top: 75vh;      /* adjust as needed */
+                right: 3rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 40vw;   /* or any size you want */
+                opacity: 0.2;   /* optional, to fade it behind text */
+            }
+        }
+        .wrapper{
+            background-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 25px 25px rgba(255, 255, 255, 0.685);
+            border-radius: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .title{
+                padding-top: 3rem;
+            }
+            .date{
+                font-family: "Odana";
+                font-size: 1.5rem;
+                padding: 1rem;
+                color: rgb(180, 0, 0);
+            }
+            .text-wrapper{
+                margin: 2rem 5rem;
+                max-width: 50vw;
+    
+            }
+        }
+        .function-buttons {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr; // ľavý | stred | pravý
+            align-items: center;
+            margin: 0 1rem 3rem;
+    
+            .left{
+                display: flex;
+                justify-content: flex-end; // alebo flex-start / flex-end podľa vkusu
+            }
+            .right {
+                display: flex;
+                justify-content: flex-start; // alebo flex-start / flex-end podľa vkusu
+            }
+    
+            .center {
+                display: flex;
+                justify-content: center;
+            }
+    
+            .function-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Odana';
+                font-size: 1.5rem;
+                font-weight: 600;
+                padding: 0.5rem 1rem;
+                margin: 0.5rem;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                color: navy;
+    
+                i {
+                margin: 0 0.5rem;
+                }
+    
+                &:hover {
+                text-decoration: underline;
+                }
+            }
+    
+            .primary{
+                background-color: navy;
+                color: white;
+                border-radius: 20px;
+                font-weight: 500;
+                font-size: 1.2rem;
+            }
+        }
+    } 
+    
+    @media(max-width: 700px){
+        .section{
+            padding: 0rem 1rem;
+            padding-top: 5rem;
+            .background{
+                overflow-x: hidden;
+                .background-image-1{
+                    position: absolute;
+                    top: -10vh;     /* adjust as needed */
+                    left: -50vw;     /* adjust as needed */
+                    z-index: -1;     /* behind the text */
+                    width: 150vw;   /* or any size you want */
+                    opacity: 0.2;   /* optional, to fade it behind text */
+                }
+    
+                .background-image-2{
+                    position: absolute;
+                    top: 90vh;      /* adjust as needed */
+                    right: -50vw;     /* adjust as needed */
+                    z-index: -1;     /* behind the text */
+                    width: 150vw;   /* or any size you want */
+                    opacity: 0.2;   /* optional, to fade it behind text */
+                }
+            }
+            .wrapper{
+                background-color: rgba(255, 255, 255, 0.6);
+                box-shadow: 0 0 25px 25px rgba(255, 255, 255, 0.685);
+                border-radius: 100px;
+                .title{
+                    padding-top: 3rem;
+                }
+                .date{
+                    font-family: "Odana";
+                    font-size: 1.5rem;
+                    text-align: center;
+                    padding: 1rem;
+                    color: rgb(180, 0, 0);
+                }
+                .text-wrapper{
+                    margin: 0 2rem;
+                    max-width: 100%;
+                    width: 90%;
+    
+                }
+            }
+            .function-buttons {
+                display: grid;
+                grid-template-columns: none; // ľavý | stred | pravý
+                align-items: center;
+                margin: 0 1rem 3rem;
+    
+                .left{
+                    display: none;
+                    justify-content: flex-end; // alebo flex-start / flex-end podľa vkusu
+                }
+                .right {
+
+                    display: none;
+                    justify-content: flex-start; // alebo flex-start / flex-end podľa vkusu
+                }
+    
+                .center {
+                    display: flex;
+                    justify-content: center;
+                }
+    
+                .function-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: 'Odana';
+                    font-size: 1rem;
+                    font-weight: 600;
+                    padding: 0.5rem m;
+                    margin: 0.5rem;
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                    color: navy;
+    
+                    i {
+                    margin: 0 0.5rem;
+                    }
+    
+                    &:hover {
+                    text-decoration: underline;
+                    }
+                }
+    
+                .primary{
+                    background-color: navy;
+                    color: white;
+                    border-radius: 20px;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                }
+            }
+        }     
+    }
+}

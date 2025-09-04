@@ -1,14 +1,26 @@
-<div class="page">
+<div class="content">
     <div class="main-title">
         <p>Archív vystúpení</p>
     </div>
 
-    <div class="content">
+    <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <div class="background">
+            <img src="assets/img/flower.jpg" class="background-image-1" alt="background">    
+            <img src="assets/img/flower.jpg" class="background-image-2" alt="background">
+            <img src="assets/img/flower.jpg" class="background-image-3" alt="background">
+            <img src="assets/img/flower.jpg" class="background-image-4" alt="background">
+        </div>
+
         <mat-tab-group class="custom-tabs">
             @for (tab of lotsOfTabs; track tab) {
                 <mat-tab [label]="tab">
                     <ul>
-                        <li class="predstavenia" *ngFor="let item of datasource"><b>{{item.date}}, {{item.city}}, </b>{{item.place}}, {{item.name}}, {{item.duration}}</li>
+                        <li class="predstavenia" *ngFor="let item of getItemsForYear(tab)"><b class="primary">{{item.date}},</b> <b class="secondary"> {{item.city}},</b> {{item.place}}, {{item.name}}</li>
                     </ul>
                 </mat-tab>
             }

@@ -1,0 +1,52 @@
+<div class="content">
+
+    <div class="section">
+        <div class="background">
+            <img src="assets/img/flower.jpg" class="background-image-1" alt="background">    
+            <img src="assets/img/flower.jpg" class="background-image-2" alt="background">
+        </div>
+    
+        <div class="wrapper">
+            <div class="title"> 
+                {{item.title}}
+            </div>
+        
+        
+            <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>
+                {{item.date}}
+            </div>
+        
+            <div class="text-wrapper">
+                <p>{{item.text}}</p>
+            </div>
+        </div>
+    
+        <app-gallery-wrapper></app-gallery-wrapper>
+    
+        <hr>
+    
+        <div class="function-buttons">
+        <div class="left">
+            <button class="function-button" *ngIf="previousSlug" [routerLink]="['/aktuality', previousSlug]">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>{{ previousTitle }}</span>
+            </button>
+        </div>
+    
+        <div class="center">
+            <button class="function-button primary" [routerLink]="['/aktuality']">
+            Späť na aktuality
+            </button>
+        </div>
+    
+        <div class="right">
+            <button class="function-button" *ngIf="nextSlug" [routerLink]="['/aktuality', nextSlug]">
+            <span>{{ nextTitle }}</span>
+            <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        </div>
+    
+    </div>
+</div>

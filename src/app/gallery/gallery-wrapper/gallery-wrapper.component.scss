@@ -1,0 +1,150 @@
+.wrapper{
+    text-align: center;
+    background-color: grey;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-27.webp");
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover; /* Scales the image to cover the element */
+    color: white;
+    width: 65rem;
+    margin: 2rem;
+    padding: 0rem;
+    .primary{
+        font-family: 'Odana';
+        text-align: left;
+        padding: 1rem 2rem;  
+        padding-bottom: 0;                  
+        margin: 1rem;
+        font-size: 2rem;
+    }
+    .main-scroll-div{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon{
+            position: absolute;
+            padding: 1rem;
+            top: 40%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .left{
+            left: 0.5rem;
+        }
+        .right{
+            right: 0.5rem;
+        }
+        .cover{
+            display: flex;
+            width: 85%;
+            .scroll-box{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                overflow: auto;
+                position: relative;
+                scroll-behavior: smooth;
+                &::-webkit-scrollbar{
+                    -webkit-appearance: none;
+                }
+                .child{
+                    background-color: none;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    margin: 0.5rem;
+                    img{
+                        height:15rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .wrapper{
+        text-align: center;
+        background-color: grey;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-27.webp");
+        background-position: center top;
+        background-attachment: fixed;
+        background-size: cover; /* Scales the image to cover the element */
+        color: white;
+        width: 90vw;
+        margin: 2rem;
+        padding: 0rem;
+        .primary{
+            font-family: 'Odana';
+            text-align: left;
+            padding: 1rem;  
+            padding-bottom: 0;                  
+            margin: 0.5rem;
+            font-size: 1.5rem;
+        }
+        .main-scroll-div{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 3rem;
+            .icon{
+                position: absolute;
+                padding: 1rem;
+                top: 75%;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: white;
+                font-size: 1rem;
+                outline: none;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 100;
+            }
+            .left{
+                left: 5rem;
+            }
+            .right{
+                right: 5rem;
+            }
+            .cover{
+                display: flex;
+                width: 100%;
+                .scroll-box{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    overflow: auto;
+                    position: relative;
+                    scroll-behavior: smooth;
+                    &::-webkit-scrollbar{
+                        -webkit-appearance: none;
+                    }
+                    .child{
+                        background-color: none;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: left;
+                        margin: 0.5rem;
+                        img{
+                            height:10rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

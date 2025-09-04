@@ -1,6 +1,8 @@
 export interface Aktualita {
-    title: string;
-    titleImage: string;
-    text: string;
-    images: string[];
-  }
+  date: string;
+  title: string;
+  slug: string;
+  titleImage: string;
+  text: string;
+  images: string[];
+}
