@@ -1,133 +1,653 @@
-.page{
-    .main-title{
+.content {
+    overflow-x: hidden;
+
+    .main-title {
         position: relative;
         width: 100%;
         height: 80vh;
         background-color: grey;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/BI4F4026.webp");
-        filter: saturate(1.2); 
-        background-position: center 20%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-27.webp");
+        background-position: center top;
         background-attachment: fixed;
         background-size: cover;
+        /* Scales the image to cover the element */
         color: white;
         display: flex;
-        justify-content: center; /* Centers text horizontally */
-        align-items: center; /* Centers text vertically */
+        justify-content: center;
+        align-items: center;
     }
 
-    .content{
-        //TODO: odstranit
+    .section {
         display: flex;
-        height: 20vh;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        padding-bottom: 4rem;
+
+        .background {
+            .background-image-1 {
+                position: absolute;
+                top: -3rem;
+                /* adjust as needed */
+                left: 5rem;
+                /* adjust as needed */
+                z-index: -1;
+                /* behind the text */
+                width: 45vw;
+                /* or any size you want */
+                opacity: 0.3;
+                /* optional, to fade it behind text */
+            }
+
+            .background-image-2 {
+                position: absolute;
+                bottom: -5rem;
+                /* adjust as needed */
+                right: 5rem;
+                /* adjust as needed */
+                z-index: -1;
+                /* behind the text */
+                width: 45vw;
+                /* or any size you want */
+                opacity: 0.3;
+                /* optional, to fade it behind text */
+            }
+        }
+
+        .container1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            padding-bottom: 0;
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            padding-left: 5%;
+            padding-right: 5%;
+            .round-button{
+                display: flex;
+                align-items: center; 
+                justify-content: center; 
+                text-align: center;
+                width: 10rem;  
+                height: 10rem;
+                border-radius: 50%; 
+                background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("/assets/img/bg/334799983_717597609847957_1473779763185668692_n.webp");
+                filter: contrast(1.1) saturate(1.3); 
+                background-attachment: fixed;
+                background-size: cover; 
+                color: white;
+                font-family: 'Odana';
+                font-weight: 500;
+                margin:0rem 2rem;
+                padding: 0.3rem;
+                .primary{
+                    display: flex;
+                    align-items: center; 
+                    justify-content: center; 
+                    background-color:  rgba(0, 0, 0, 0.5);
+                    padding: 0;
+                    width: 8rem;
+                    height: 8rem;
+                    border-radius: 50%; 
+                }
+            }               
+        }
+
+
+        .block {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-27.webp");
+            background-attachment: fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 1rem;
+
+            .title {
+                text-align: center;
+                font-family: 'Odana';
+                font-size: 1.3rem;
+                background-color: rgba(0, 0, 0, 0.60);
+                color: white;
+                font-weight: 500;
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                line-height: 1.0;
+                gap: 2rem;
+
+                .contact {
+                    padding: 0 1rem;
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.60);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+
+        .text {
+            padding: 2rem 5rem;
+            padding-bottom: 0;
+            max-width: 60%;
+            font-size: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .primary {
+                font-family: 'Odana';
+                font-weight: 600;
+                font-size: 1.8rem;
+                color: navy;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            padding-bottom: 0;
+            .text-left{
+                padding: 0.5rem 2rem;
+                background-color: rgba(255, 255, 255, 0.6);
+                box-shadow: 0 0 25px 25px rgba(255, 255, 255, 0.685);
+                border-radius: 100px;
+                width: 25rem;
+                .title{
+                        font-family: 'Odana'; 
+                        font-size: 1.5rem; 
+                        color: rgb(180, 0, 0);
+                        font-weight: 500;
+                    } 
+            }
+            .text-right{
+                padding: 0.5rem 2rem;
+                background-color: rgba(255, 255, 255, 0.685);
+                box-shadow: 0 0 25px 25px rgba(255, 255, 255, 0.685);
+                border-radius: 50px;
+                width: 25rem;  
+                p{
+                    .title{
+                            font-family: 'Odana'; 
+                            font-size: 1.5rem; 
+                            color: rgb(180, 0, 0);
+                            font-weight: 500;
+                        } 
+                }       
+            }
+            .img{
+                width: 25rem;
+                height: fit-content;
+                padding: 0rem 2rem;
+            }
+            .small-wrapper {
+                background-color: rgba(255, 255, 255, 0.685);
+                box-shadow: 0 0 25px 25px rgba(255, 255, 255, 0.685);
+                border-radius: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 30rem;
+                height: fit-content;
+                text-align: left;
+                margin: 0rem 2rem;
+                padding: 1rem 0.5rem;
+
+                .primary {
+                    width: 28rem;
+                    font-size: 1.2rem;
+                    margin: 0rem 1rem;
+                    padding: 2rem 1rem;
+                }
+
+                .secondary {
+                    width: 28rem;
+                    font-size: 1rem;
+                    margin: 0rem 1rem;
+                    padding: 2rem 1rem;
+                }
+
+                img {
+                    width: 95%;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .center{
+            align-items: center;
+        }
+        .top{
+            align-items: top;
+        }
+    }
+
+    .transparent {
+        background-color: grey;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-27.webp");
+        background-attachment: fixed;
+        background-size: cover;
+
+        .container {
+            .small-wrapper {
+                box-shadow: none;
+                border-radius: 0px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+
+                .primary {
+                    background-color: rgba(0, 0, 0, 0.60);
+                }
+
+                .secondary {
+                    background-color: rgba(0, 0, 0, 0.60);
+                }
+
+                img {
+                    border: 0.5rem solid rgba(0, 0, 0, 0.60);
+                }
+            }
+
+            .wrapper {
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                background-image: none;
+                color: white;
+                width: 65rem;
+                margin: 2rem;
+                padding: 0rem;
+
+                .primary {
+                    font-family: 'Odana';
+                    text-align: left;
+                    padding-left: 2rem;
+                    margin: 1rem;
+                    font-size: 2rem;
+                }
+
+                .main-scroll-div {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .icon {
+                        position: absolute;
+                        padding: 1rem;
+                        top: 40%;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        color: white;
+                        font-size: 1rem;
+                        outline: none;
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        z-index: 100;
+                    }
+
+                    .left {
+                        left: 0.5rem;
+                    }
+
+                    .right {
+                        right: 0.5rem;
+                    }
+
+                    .cover {
+                        display: flex;
+                        width: 85%;
+
+                        .scroll-box {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: left;
+                            align-items: center;
+                            overflow: auto;
+                            position: relative;
+                            scroll-behavior: smooth;
+
+                            &::-webkit-scrollbar {
+                                -webkit-appearance: none;
+                            }
+
+                            .child {
+                                background-color: none;
+                                display: flex;
+                                flex-direction: column;
+                                text-align: left;
+                                margin: 0.5rem;
+
+                                img {
+                                    height: 15rem;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .round-button {
+        background-color: grey;
+        color: white;
+        font-family: 'Odana';
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-27.webp");
+        background-attachment: fixed;
+        background-size: cover;
+        width: 11rem;
+        height: 11rem;
+        border-radius: 50%;
+        border: none;
+        display: flex;
         align-items: center;
         justify-content: center;
-        //az sem
-        .section{
-            padding-top: 1rem;
-            padding-bottom:5rem;
-            .title{
-                display: flex;
-                justify-content: center;
-                font-size: xx-large;
-                padding-top: 1rem;
-                padding-bottom: 2rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.60);
+            font-size: 1.5rem;
+            width: 9rem;
+            height: 9rem;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .content {
+        .section {
+            padding-bottom: 2rem;
+            .background {
+                .background-image-1 {
+                    top: 0rem;
+                    left: -50vw;
+                    z-index: -1;
+                    width: 150vw;
+                }
+                .background-image-2 {
+                    bottom: 40rem;
+                    right: -50vw;
+                    z-index: -1;
+                    width: 150vw;
+                }
             }
-            .segment{
+
+            .block {
+                .title {
+                    font-size: 1.2rem;
+                    padding: 1rem 0rem;
+                    margin-bottom: 1rem;
+                }
+
+                .wrapper {
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: 0 1rem;
+                    width: 90%;
+
+                    .contact {
+                        padding: 0 1rem;
+                        width: 100%;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .text {
+                padding: 1rem;
+                max-width: none;
+                font-size: 1.2rem;
                 display: flex;
-                padding-left: 15%;
-                padding-right: 15%;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                text-align: center;
+
+                .primary {
+                    font-family: 'Odana';
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    color: navy;
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 1rem;
+                padding-bottom: 0;
                 .text-left{
-                    margin-right: 5rem;
+                    padding: 0.5rem 2rem;
+                    margin-bottom: 1rem;
+                    margin-bottom: 1rem;
+                    width: 90vw;
                 }
                 .text-right{
-                    margin-left: 5rem;            
+                    padding: 0.5rem 2rem;
+                    margin-bottom: 1rem;
+                    width: 90vw;       
                 }
                 .img{
-                    width: 40%;
+                    width: 100vw;
+                    height: fit-content;
+                    padding: 0rem;
                 }
-                .img-left{
-                    width: 40%;
-                    margin-left: 2rem;
-                }
-                .img-right{
-                    width: 40%;
-                    margin-right: 2rem;
-                }
-            }
-            .container{
-                display: flex;
-                justify-content: center;
-                padding: 1rem;
-                padding-left: 5%;
-                padding-right: 5%;
-                .element{
-                    text-align: center;
-                    width: 25%;
-                    background-color: grey;
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/BI4F4026.webp");
-                    filter: saturate(1.2); 
-                    background-attachment: fixed;
-                    background-size: cover; /* Scales the image to cover the element */
-                    color: white;
-                    margin:0rem 2rem;
-                    padding: 0.3rem;
-                    border-radius: 5%;
-                    .element-primary{
-                        background-color:  rgba(0, 0, 0, 0.60);
-                        margin:0rem 1rem;
-                        padding:0.5rem
-                    }
-                    .element-secondary{
-                        font-size: small;
-                    }
-                    img{
-                        width: 90%;
-                        margin-top: 1rem;
-                        border: 0.5rem solid rgba(0, 0, 0, 0.60);
-                    }
-                }
-            }
-            .container2{
-                display: flex;
-                justify-content: center;
-                padding: 1rem;
-                padding-left: 5%;
-                padding-right: 5%;
-                .element2{
+                .small-wrapper {
+                    background-color: rgba(255, 255, 255, 0.685);
+                    box-shadow: 0 0 25px 25px rgba(255, 255, 255, 0.685);
+                    border-radius: 100px;
                     display: flex;
-                    align-items: center; /* Vertical alignment */
-                    justify-content: center; /* Horizontal alignment */
-                    text-align: center;
-                    width: 10rem;   /* Set equal width and height */
-                    height: 10rem;
-                    border-radius: 50%; /* Makes it a circle */
-                    background-color: grey;
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/BI4F4026.webp");
-                    filter: saturate(1.2); 
-                    background-attachment: fixed;
-                    background-size: cover; /* Scales the image to cover the element */
-                    color: white;
-                    margin:0rem 2rem;
-                    padding: 0.3rem;
-                    .element2-primary{
-                        display: flex;
-                        align-items: center; /* Vertical alignment */
-                        justify-content: center; /* Horizontal alignment */
-                        background-color:  rgba(0, 0, 0, 0.60);
-                        width: 8rem;
-                        height: 8rem;
-                        border-radius: 50%; /* Makes it a circle */
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 90vw;
+                    height: fit-content;
+                    text-align: left;
+                    margin: 0rem 2rem;
+                    padding: 1rem 0.5rem;
+
+                    .primary {
+                        width: 90vw;
+                        font-size: 1rem;
+                        margin: 0rem 1rem;
+                        padding: 0rem 1rem;
                     }
-                }                
+
+                    .secondary {
+                        width: 90vw;
+                        font-size: 0.85rem;
+                        margin: 0rem 1rem;
+                        padding: 1rem;
+                    }
+
+                    img {
+                        width: 95%;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+            .switch{
+                flex-direction: column-reverse;
             }
         }
-        .section-bg{
-             background-image: url("/assets/img/symphony.webp");
+
+        .transparent {
+            background-color: grey;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-27.webp");
+            background-attachment: fixed;
+            background-size: cover;
+
+            .container {
+                .small-wrapper {
+                    box-shadow: none;
+                    border-radius: 0px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    width: 90vw;
+                    color: white;
+                    padding: 0rem;
+                    .primary {
+                        background-color: rgba(0, 0, 0, 0.60);
+                        margin: 1rem 0rem;
+                        padding: 1rem;
+                        font-size: 1rem;
+                        width: 90%;
+                    }
+
+                    .secondary {
+                        background-color: rgba(0, 0, 0, 0.60);
+                        padding: 1rem;
+                        width: 90%;
+                        font-size: 0.85rem;
+                    }
+
+                    img {
+                        border: 0.5rem solid rgba(0, 0, 0, 0.60);
+                        margin: 0rem;
+                    }
+                }
+
+                .wrapper {
+                    text-align: center;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    background-image: none;
+                    color: white;
+                    width: 65rem;
+                    margin: 2rem;
+                    padding: 0rem;
+
+                    .primary {
+                        font-family: 'Odana';
+                        text-align: left;
+                        padding-left: 2rem;
+                        margin: 1rem;
+                        font-size: 2rem;
+                    }
+
+                    .main-scroll-div {
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .icon {
+                            position: absolute;
+                            padding: 1rem;
+                            top: 40%;
+                            background-color: rgba(0, 0, 0, 0.8);
+                            color: white;
+                            font-size: 1rem;
+                            outline: none;
+                            border: none;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            z-index: 100;
+                        }
+
+                        .left {
+                            left: 0.5rem;
+                        }
+
+                        .right {
+                            right: 0.5rem;
+                        }
+
+                        .cover {
+                            display: flex;
+                            width: 85%;
+
+                            .scroll-box {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                justify-content: left;
+                                align-items: center;
+                                overflow: auto;
+                                position: relative;
+                                scroll-behavior: smooth;
+
+                                &::-webkit-scrollbar {
+                                    -webkit-appearance: none;
+                                }
+
+                                .child {
+                                    background-color: none;
+                                    display: flex;
+                                    flex-direction: column;
+                                    text-align: left;
+                                    margin: 0.5rem;
+
+                                    img {
+                                        height: 15rem;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        .clickable{
-            cursor: pointer;
+
+        .round-button {
+            background-color: grey;
+            color: white;
+            font-family: 'Odana';
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-27.webp");
+            background-attachment: fixed;
+            background-size: cover;
+            width: 11rem;
+            height: 11rem;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: inherit;
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0.60);
+                font-size: 1.5rem;
+                width: 9rem;
+                height: 9rem;
+                border-radius: 50%;
+            }
         }
     }
 }

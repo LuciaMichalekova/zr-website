@@ -48,13 +48,13 @@ export class AppComponent {
       this.activeSubMenu = null;
       this.activeSubSubMenu = null;
       this.currentPath = (event as NavigationEnd).urlAfterRedirects;
-      this.scrolled = ["obsadenie-suboru", "produkty", "galeria"].some(path => this.currentPath.includes(path));
+      this.scrolled = ["aktuality/"].some(path => this.currentPath.includes(path));
     });
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    this.scrolled = ["obsadenie-suboru", "produkty"].some(path => this.currentPath.includes(path));
+    this.scrolled = ["aktuality/"].some(path => this.currentPath.includes(path));
     if(this.scrolled == false){
       (window.scrollY > 100) ? this.scrolled = true : this.scrolled = false;
     }

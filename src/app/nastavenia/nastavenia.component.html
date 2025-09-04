@@ -1,0 +1,574 @@
+<div class="content">
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title> Predstavenia </mat-panel-title>
+                <mat-panel-description> Aktualizácia nadchádzajúcich predstavení </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                <!--Pridat nove predstavenie-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><span><i class="fa-solid fa-plus"></i></span> &nbsp; &nbsp; <span>Pridať nové</span></mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <form>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Názov predstavenia</mat-label>
+                            <input matInput placeholder="Ex. Pizza" name="title">
+                        </mat-form-field>
+
+                        <div class="row-fields">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Dátum</mat-label>
+                                <input matInput [matDatepicker]="picker" name="date">
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Čas</mat-label>
+                                <input matInput type="time" [(ngModel)]="selectedTime" name="time">
+                            </mat-form-field>
+                        </div>
+
+                        <mat-form-field>
+                            <mat-label>Obec</mat-label>
+                            <input matInput placeholder="Napr. Košice">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Miesto</mat-label>
+                            <input matInput placeholder="Napr. Cassovia Folkfest">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Info</mat-label>
+                            <textarea matInput placeholder="Napr. Vystúpenie súboru v rámci festivalu"></textarea>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Link na vstupenky</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </form> 
+                </mat-expansion-panel>
+
+                <!--Upravit existujuce predstavenia-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> <span><i class="fa-solid fa-wrench"></i></span> &nbsp; &nbsp; <span>Upraviť existujúce</span> </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <table mat-table [dataSource]="performances" class="mat-elevation-z8">
+                        <ng-container matColumnDef="date">
+                            <th mat-header-cell *matHeaderCellDef> Dátum </th>
+                            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="time">
+                            <th mat-header-cell *matHeaderCellDef> Čas </th>
+                            <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="duration">
+                            <th mat-header-cell *matHeaderCellDef> Dĺžka trvania </th>
+                            <td mat-cell *matCellDef="let element"> {{element.duration}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="city">
+                            <th mat-header-cell *matHeaderCellDef> Mesto </th>
+                            <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="place">
+                            <th mat-header-cell *matHeaderCellDef> Miesto </th>
+                            <td mat-cell *matCellDef="let element"> {{element.place}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef> Názov </th>
+                            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="info">
+                            <th mat-header-cell *matHeaderCellDef> Info </th>
+                            <td mat-cell *matCellDef="let element"> {{element.info}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="tickets">
+                            <th mat-header-cell *matHeaderCellDef> Lístky </th>
+                            <td mat-cell *matCellDef="let element"> {{element.tickets}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="functions">
+                            <th mat-header-cell *matHeaderCellDef> Funkcie </th>
+                            <td mat-cell *matCellDef="let element">
+                                <div class="function-buttons">
+                                    <button> <i class="fa-solid fa-pencil"></i> </button>
+                                    <button> <i class="fa-regular fa-trash-can"></i> </button>
+                                </div>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="performanceColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: performanceColumns;"></tr>
+                    </table>
+                </mat-expansion-panel>
+            </p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title> Aktuality </mat-panel-title>
+                <mat-panel-description> Aktualizácia noviniek FS Železiar </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                <!--Pridat novu aktualitu-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><span><i class="fa-solid fa-plus"></i></span> &nbsp; &nbsp; <span>Pridať novú</span></mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <form>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nadpis</mat-label>
+                            <input matInput placeholder="Ex. Pizza" name="title">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Titulná fotografia</mat-label>
+                            <textarea matInput placeholder="Napr. Vystúpenie súboru v rámci festivalu"></textarea>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Text</mat-label>
+                            <textarea matInput placeholder="Napr. Vystúpenie súboru v rámci festivalu"></textarea>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label>Fotografie</mat-label>
+                            <textarea matInput placeholder="Napr. Vystúpenie súboru v rámci festivalu"></textarea>
+                        </mat-form-field>
+                    </form>
+
+                </mat-expansion-panel>
+
+                <!--Upravit existujuce aktuality-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> <span><i class="fa-solid fa-wrench"></i></span> &nbsp; &nbsp; <span>Upraviť existujúce</span> </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <table mat-table [dataSource]="actualities" class="mat-elevation-z8">
+
+                        <ng-container matColumnDef="title">
+                            <th mat-header-cell *matHeaderCellDef> Nadpis </th>
+                            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="titleImage">
+                            <th mat-header-cell *matHeaderCellDef> Titulná fotografia </th>
+                            <td mat-cell *matCellDef="let element"> {{element.titleImage}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="text">
+                            <th mat-header-cell *matHeaderCellDef> Text </th>
+                            <td mat-cell *matCellDef="let element"> {{element.text}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="images">
+                            <th mat-header-cell *matHeaderCellDef> Fotografie </th>
+                            <td mat-cell *matCellDef="let element"> {{element.images}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="functions">
+                            <th mat-header-cell *matHeaderCellDef> Funkcie </th>
+                            <td mat-cell *matCellDef="let element">
+                                <div class="function-buttons">
+                                    <button> <i class="fa-solid fa-pencil"></i> </button>
+                                    <button> <i class="fa-regular fa-trash-can"></i> </button>
+                                </div>
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="actualitiesColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: actualitiesColumns;"></tr>
+                    </table>
+                </mat-expansion-panel>
+            </p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title> Členovia </mat-panel-title>
+                <mat-panel-description> Aktualizácia členov FS Železiar </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                <!--Pridat noveho clena-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><span><i class="fa-solid fa-plus"></i></span> &nbsp; &nbsp; <span>Pridať nového</span></mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <form>
+                        <div class="row-fields">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Meno</mat-label>
+                                <input matInput placeholder="Ex. Pizza" name="title">
+                            </mat-form-field>
+    
+                            <mat-form-field appearance="fill">
+                                <mat-label>Priezvisko</mat-label>
+                                <input matInput placeholder="Ex. Pizza">
+                            </mat-form-field>
+                        </div>
+
+                        <mat-form-field>
+                            <mat-label>Fotografia</mat-label>
+                            <textarea matInput placeholder="Napr. Vystúpenie súboru v rámci festivalu"></textarea>
+                        </mat-form-field>
+
+                        <div class="row-fields">
+                            <button>Tanečná zložka</button>
+                            <button>Spevácka zložka</button>
+                            <button>Hudobná zložka</button>
+                            <button>Vedenie</button>
+                        </div>
+                    </form>
+                </mat-expansion-panel>
+
+                <!--Upravit existujuceho clena-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> <span><i class="fa-solid fa-wrench"></i></span> &nbsp; &nbsp; <span>Upraviť existujúceho</span> </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    
+                    <!--Tanecnici-->    
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> Tanečníci </mat-panel-title>
+                        </mat-expansion-panel-header> 
+                        
+                        <table mat-table [dataSource]="dancers" class="mat-elevation-z8">
+
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> Meno </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="image">
+                                <th mat-header-cell *matHeaderCellDef> Fotografia </th>
+                                <td mat-cell *matCellDef="let element"> {{element.image}} </td>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="functions">
+                                <th mat-header-cell *matHeaderCellDef> Funkcie </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <div class="function-buttons">
+                                        <button> <i class="fa-solid fa-pencil"></i> </button>
+                                        <button> <i class="fa-regular fa-trash-can"></i> </button>
+                                    </div>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="membersColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: membersColumns;"></tr>
+                        </table>
+                    </mat-expansion-panel>
+
+                    <!--Spevacky-->    
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> Speváčky </mat-panel-title>
+                        </mat-expansion-panel-header> 
+                        
+                        <table mat-table [dataSource]="singers" class="mat-elevation-z8">
+
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> Meno </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="image">
+                                <th mat-header-cell *matHeaderCellDef> Fotografia </th>
+                                <td mat-cell *matCellDef="let element"> {{element.image}} </td>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="functions">
+                                <th mat-header-cell *matHeaderCellDef> Funkcie </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <div class="function-buttons">
+                                        <button> <i class="fa-solid fa-pencil"></i> </button>
+                                        <button> <i class="fa-regular fa-trash-can"></i> </button>
+                                    </div>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="membersColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: membersColumns;"></tr>
+                        </table>
+                    </mat-expansion-panel>
+
+                    <!--Hudobnici-->    
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> Hudobníci </mat-panel-title>
+                        </mat-expansion-panel-header> 
+                        
+                        <table mat-table [dataSource]="musicians" class="mat-elevation-z8">
+
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> Meno </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="image">
+                                <th mat-header-cell *matHeaderCellDef> Fotografia </th>
+                                <td mat-cell *matCellDef="let element"> {{element.image}} </td>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="functions">
+                                <th mat-header-cell *matHeaderCellDef> Funkcie </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <div class="function-buttons">
+                                        <button> <i class="fa-solid fa-pencil"></i> </button>
+                                        <button> <i class="fa-regular fa-trash-can"></i> </button>
+                                    </div>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="membersColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: membersColumns;"></tr>
+                        </table>
+                    </mat-expansion-panel>
+
+                    <!--Hudobnici-->    
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> Vedenie </mat-panel-title>
+                        </mat-expansion-panel-header> 
+                        
+                        <table mat-table [dataSource]="leadership" class="mat-elevation-z8">
+
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> Meno </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="image">
+                                <th mat-header-cell *matHeaderCellDef> Fotografia </th>
+                                <td mat-cell *matCellDef="let element"> {{element.image}} </td>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="functions">
+                                <th mat-header-cell *matHeaderCellDef> Funkcie </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <div class="function-buttons">
+                                        <button> <i class="fa-solid fa-pencil"></i> </button>
+                                        <button> <i class="fa-regular fa-trash-can"></i> </button>
+                                    </div>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="membersColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: membersColumns;"></tr>
+                        </table>
+                    </mat-expansion-panel>
+                </mat-expansion-panel>
+            </p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title> Aktuálne programy </mat-panel-title>
+                <mat-panel-description> Aktualizácia ponúkaných programov </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><span><i class="fa-solid fa-plus"></i></span> &nbsp; &nbsp; <span>Pridať nový</span></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>This is the primary content of the panel.</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> <span><i class="fa-solid fa-wrench"></i></span> &nbsp; &nbsp; <span>Upraviť existujúci</span> </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>This is the primary content of the panel.</p>
+                </mat-expansion-panel>
+            </p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title> Produkty </mat-panel-title>
+                <mat-panel-description> Aktualizácia ponúkaných produktov </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><span><i class="fa-solid fa-plus"></i></span> &nbsp; &nbsp; <span>Pridať nový</span></mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>This is the primary content of the panel.</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> <span><i class="fa-solid fa-wrench"></i></span> &nbsp; &nbsp; <span>Upraviť existujúci</span> </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>This is the primary content of the panel.</p>
+                </mat-expansion-panel>                
+            </p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title> Archív osobností </mat-panel-title>
+                <mat-panel-description> Aktualizácia osobností FS Železiar </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                <!--Pridat novu osobnost-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><span><i class="fa-solid fa-plus"></i></span> &nbsp; &nbsp; <span>Pridať novú</span></mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <form>
+                        <div class="row-fields">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Meno</mat-label>
+                                <input matInput placeholder="Ex. Pizza" name="title">
+                            </mat-form-field>
+    
+                            <mat-form-field appearance="fill">
+                                <mat-label>Priezvisko</mat-label>
+                                <input matInput placeholder="Ex. Pizza">
+                            </mat-form-field>
+                        </div>
+
+                        <mat-form-field>
+                            <mat-label>Fotografia</mat-label>
+                            <textarea matInput placeholder="Napr. Vystúpenie súboru v rámci festivalu"></textarea>
+                        </mat-form-field>
+
+                        <div class="row-fields">
+                            <button>Umelecké vedenie</button>
+                            <button>Krojárka</button>
+                            <button>Asistent choreografa</button>
+                            <button>Organizačný vedúci</button>
+                            <button>Pedagóg</button>
+                            <button>Vedúci tanečnej zložky</button>
+                            <button>Vedúci speváckej zložky</button>
+                            <button>Vedúci ľudovej hudby</button>
+                            <button>Významný interprét</button>
+                        </div>
+                    </form>
+                </mat-expansion-panel>
+
+                <!--Upravit existujucu osobnost-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> <span><i class="fa-solid fa-wrench"></i></span> &nbsp; &nbsp; <span>Upraviť existujúcu</span> </mat-panel-title>
+                    </mat-expansion-panel-header>
+                </mat-expansion-panel>
+            </p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title> Archív premiér </mat-panel-title>
+                <mat-panel-description> Aktualizácia archívu premiér FS Železiar </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>
+                <!--Pridat novu premiéru-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title><span><i class="fa-solid fa-plus"></i></span> &nbsp; &nbsp; <span>Pridať novú</span></mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                    <form>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Názov</mat-label>
+                            <input matInput placeholder="Ex. Pizza" name="title">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Dátum</mat-label>
+                            <input matInput [matDatepicker]="picker" name="date">
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+
+                        <div class="row-fields">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Miesto</mat-label>
+                                <input matInput placeholder="Ex. Pizza" name="title">
+                            </mat-form-field>
+
+                            <mat-form-field appearance="fill">
+                                <mat-label>Mesto</mat-label>
+                                <input matInput placeholder="Ex. Pizza" name="title">
+                            </mat-form-field>
+                        </div>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Info</mat-label>
+                            <textarea matInput placeholder="Ex. Pizza" name="title"></textarea>
+                        </mat-form-field>                       
+                    </form>
+                </mat-expansion-panel>
+
+                <!--Upravit existujucu premiéru-->
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> <span><i class="fa-solid fa-wrench"></i></span> &nbsp; &nbsp; <span>Upraviť existujúcu</span> </mat-panel-title>
+                    </mat-expansion-panel-header>
+
+                        <table mat-table [dataSource]="premiere" class="mat-elevation-z8">
+
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> Názov </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="date">
+                                <th mat-header-cell *matHeaderCellDef> Dátum </th>
+                                <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="place">
+                                <th mat-header-cell *matHeaderCellDef> Miesto </th>
+                                <td mat-cell *matCellDef="let element"> {{element.place}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="city">
+                                <th mat-header-cell *matHeaderCellDef> Mesto </th>
+                                <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="info">
+                                <th mat-header-cell *matHeaderCellDef> Info </th>
+                                <td mat-cell *matCellDef="let element"> {{element.info}} </td>
+                            </ng-container>
+
+                            <ng-container matColumnDef="functions">
+                                <th mat-header-cell *matHeaderCellDef> Funkcie </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <div class="function-buttons">
+                                        <button> <i class="fa-solid fa-pencil"></i> </button>
+                                        <button> <i class="fa-regular fa-trash-can"></i> </button>
+                                    </div>
+                                </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="premiereColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: premiereColumns;"></tr>
+                        </table>                    
+                </mat-expansion-panel>
+            </p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

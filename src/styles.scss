@@ -1,6 +1,8 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
 @font-face {
     font-family: 'Odana';
     src: url('assets/fonts/Odana.otf');
@@ -8,15 +10,23 @@
 
 html, body { height: 100%; }
 body { 
-    margin: 0; 
-    font-family:  "Merienda", serif;
-    font-size: large;
+  margin: 0;
+  width: 100%;
+  font-family: "Winky Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-style: normal;
+  overflow-x: hidden;
 }
 button{
-    font-family: "Merienda", serif;
+  font-family: "Winky Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 mat-button{
-    font-family: "Merienda", serif;
+  font-family: "Winky Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .main-title{
     font-family:  'Odana';
@@ -24,13 +34,78 @@ mat-button{
     font-size: 6rem;
     text-align: center;
 }
+.section{
+    position: relative;
+    .background{
+        overflow-x: hidden;
+    }
+    .divider {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: -2.2vw;
+        left:0;
+        width: 100%;
+        z-index: 10;
+        .line {
+            width: 50vw;
+            height: auto;
+        }
+    }
+    .title{
+        text-align: center;
+        font-size: 4rem;
+        color: navy;
+        font-family: 'Odana';
+        font-weight: 600;
+        margin: 0;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            margin: 0rem 1rem;
+        }
+        img{
+            margin:0rem;
+            width: 4rem;
+        }
+    }
+    .white{
+        color: white;
+        font-weight: 500;
+    }
+}
 
 @media(max-width: 700px){
     .main-title{
         font-size: 3.5rem;
     }
+    .section{
+        .divider{
+            top: -2.5vh;
+
+            .line{
+                width: 100vw;
+            }
+            .wide{
+                display: none;
+            }
+        }
+        .title{
+            font-size: 2rem;
+            padding-top: 1rem;
+            span{
+                margin: 0rem 0.5rem;
+            }
+            img{
+                width: 2rem;
+            }
+        }
+    }
 }
 
 //#FE0000 zr-cervena
-//#004DFF zr-modra
+//#004DFF -modra
 

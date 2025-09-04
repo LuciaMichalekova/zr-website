@@ -7,4 +7,6 @@ export interface Predstavenie {
     name: string | null;
     info: string | null;
     tickets: string | null;
+    free?: boolean;
+    ticketsOnPlace? : boolean;
   }

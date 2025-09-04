@@ -1,10 +1,31 @@
-<div class="page">
+<div class="content">
     <div class="main-title">
         <p>Premiéry</p>
     </div>
 
-    <div class="content">
-        ...NA STRÁNKE SA PRACUJE...
+    <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <div class="background">
+            <img src="assets/img/flower.jpg" class="background-image-1" alt="background">    
+            <img src="assets/img/flower.jpg" class="background-image-2" alt="background">
+            <img src="assets/img/flower.jpg" class="background-image-3" alt="background">
+            <img src="assets/img/flower.jpg" class="background-image-4" alt="background">
+            <img src="assets/img/flower.jpg" class="background-image-5" alt="background">
+            <img src="assets/img/flower.jpg" class="background-image-6" alt="background">
+        </div>
+
+        <div class="container">
+            <div *ngFor="let item of dataSource">
+                <p class="primary">{{item.date}}</p>
+                <p class="secondary">{{item.name}}</p>
+                <p class="tertiary">{{item.place}}, {{item.city}}</p>
+                <p>{{item.info}}</p>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -1,11 +1,35 @@
-<div class="home">
+<div class="content">
     <div class="slider-wrapper">
         <div class="slider">
-            <img id="slide-1" src="assets/img/Svadobné_20250319_182117_0000.png">
-            <img id="slide-2" src="assets/img/Svadobné_20250315_120111_0000.png">
-            <img id="slide-3" src="assets/img/3_20250312_180940_0002.png">            
-            <img id="slide-4" src="assets/img/Svadobné_20250315_114136_0001.png">
-            <img id="slide-5" src="assets/img/Svadobné_20250315_114136_0000.png">
+            <picture>
+                <source media="(max-width: 1199px)" srcset="assets/img/home/Čepenie_výška.png">
+                <source media="(min-width: 1200px)" srcset="assets/img/home/Čepenie_šírka.png">
+                <img class="home-image" id="slide-1" src="assets/img/home/Čepenie_šírka.png">
+            </picture>
+
+            <picture>
+                <source media="(max-width: 1199px)" srcset="assets/img/home/Aktuálne_programy_výška.png">
+                <source media="(min-width: 1200px)" srcset="assets/img/home/Aktuálne_programy_šírka.png">
+                <img class="home-image" id="slide-2" src="assets/img/home/Aktuálne_programy_šírka.png" alt="Description of image">
+            </picture>
+
+            <picture>
+                <source media="(max-width: 1199px)" srcset="assets/img/home/Požičovňa_krojov_výška.png">
+                <source media="(min-width: 1200px)" srcset="assets/img/home/Požičovňa_krojov_šírka.png">
+                <img class="home-image" id="slide-3" src="assets/img/home/Požičovňa_krojov_šírka.png" alt="Description of image">
+            </picture>
+
+            <picture>
+                <source media="(max-width: 1199px)" srcset="assets/img/home/Kurz_šírka.png">
+                <source media="(min-width: 1200px)" srcset="assets/img/home/Kurz_šírka.png">
+                <img class="home-image" id="slide-4" src="assets/img/home/Kurz_šírka.png" alt="Description of image">
+            </picture>
+
+            <picture>
+                <source media="(max-width: 1199px)" srcset="assets/img/home/Podpora_výška.png">
+                <source media="(min-width: 1200px)" srcset="assets/img/home/Podpora_šírka.png">
+                <img class="home-image" id="slide-5" src="assets/img/home/Podpora_šírka.png" alt="Description of image">
+            </picture>
         </div>
         
         <div class="slider-nav">
@@ -21,29 +45,57 @@
     </div>
 
     <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
         <h1 class="title">
             <img src="assets/img/zr-logo-left.png" alt="">
             <span>Predstavenia</span> 
             <img src="assets/img/zr-logo-right.png" alt="">
         </h1>
-    
+
         <div class="main-scroll-div">
-            <div><button class="icon left" (click)="scrolll()"><i class="fa-solid fa-arrow-left-long fa-lg"></i></button></div>
+            <div>
+                <button class="icon left" (click)="scrolll()"> <i class="fa-solid fa-arrow-left-long fa-lg"></i></button>
+            </div>
+
             <div class="cover">
-                <div class="scroll-images">
-                    <div class="blank"></div>
+                <div class="scroll-box">
                     <div class="child" *ngFor="let item of dataSource1 | slice:0:5">
                         <p class="primary-info"> {{ item.date }} </p>  
                         <p class="secondary-info"> {{ item.name }} </p>  
-                        <p class=""> <i class="fa-solid fa-location-dot"></i> {{item.city}}, {{ item.place }} ({{ item.time }})</p>        
-                        <p class=""><i class="fa-solid fa-clock"></i> {{item.duration}}</p>
-                        <p class="truncate"><i class="fa-solid fa-circle-info"></i> {{ item.info }} </p>
-                        <button class="buy-button"><div>Kúpiť vstupenky</div></button>
+                        <p class="tertiary-info"> <i class="fa-solid fa-location-dot"></i> 
+                            <span *ngIf="item.city"> {{ item.city }}, </span>
+                            <span *ngIf="item.place"> {{ item.place }} </span> 
+                            <span *ngIf="item.time"> ({{ item.time }}) </span>
+                        </p>        
+                        <p *ngIf="item.duration"><i class="fa-solid fa-clock"></i> {{item.duration}}</p>
+                        <p *ngIf="item.info"><i class="fa-solid fa-circle-info"></i> {{ item.info }} </p>
+
+                        <button class="buy-button" *ngIf="item.tickets && item.tickets !== ''"> 
+                        <a [href]="item.tickets" target="_blank">Kúpiť vstupenku</a>
+                        </button>
+
+                        <button class="special" *ngIf="item.free"> 
+                        <a>Vstup zdarma</a>
+                        </button>
+
+                        <button class="special" *ngIf="item.ticketsOnPlace"> 
+                        <a>Vstupenky na mieste</a>
+                        </button>
+
+                        <button class="disabled" *ngIf="(!item.tickets || item.tickets.trim() === '') && !item.free && !item.ticketsOnPlace"> 
+                        <a>Kúpiť vstupenku</a>
+                        </button>
                     </div>
-                    <div class="blank"></div>
                 </div>
             </div>
-            <div><button class="icon right" (click)="scrollr()"><i class="fa-solid fa-arrow-right-long fa-lg"></i></button></div>
+
+            <div>
+                <button class="icon right" (click)="scrollr()"><i class="fa-solid fa-arrow-right-long fa-lg"></i></button>
+            </div>
         </div>
     
         <div class="actions">
@@ -52,6 +104,11 @@
     </div>
 
     <div class="section transparent">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
         <h1 class="title white">
             <img src="assets/img/zr-logo-left.png" alt="">
             <span>Aktuality</span>
@@ -60,14 +117,15 @@
         
         <div class="wrapper">
             <div class="item" *ngFor="let item of dataSource2 | slice:0:3">
-                <p class="title-image"><img src="{{item.titleImage}}"></p>
-                <p class="title"> {{ item.title }} </p>  
-                <p class="truncate"> {{ item.text }} </p>
-                <button class="button"><div>Čítať viac</div></button>
+                <div>
+                    <p class="title-image"><img src="{{item.titleImage}}"></p>
+                    <p class="title"> {{ item.title }} </p>  
+                    <p class="truncate"> {{ item.text }} </p>
+                    <button class="button" [routerLink]="['/aktuality', item.slug]"><p>Čítať viac</p></button> 
+                </div>
             </div>
         </div>
 
-    
         <div class="actions">
             <button class="button" routerLink="aktuality" routerLinkActive="active"><span>Ďalšie</span></button>
         </div>

@@ -1,28 +1,75 @@
-.title{
+.main-title{
     position: relative;
-    font-family: 'Odana';
+    width: 100%;
+    height: 80vh;
+    background-color: grey;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/img/bg/334277273_1326034581306574_5098482351838506347_n.webp");
+    filter: saturate(1.15); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 15%;
+    color: white;
     display: flex;
-    padding-top: 10rem;
-    padding-bottom: 1rem;
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 600;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
 }
 
 .content{
-    padding: 3rem 0rem;
-    .info{
-        padding: 1rem;
+    .section{
+        padding: 3rem;
+        position: relative;
+        .background{
+            overflow-x: hidden;
+            .background-image-1{
+                position: absolute;
+                top: -15vw;     /* adjust as needed */
+                left: 3rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 40vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+
+            .background-image-2{
+                position: absolute;
+                top: 20vw;      /* adjust as needed */
+                right: 3rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 40vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+            .background-image-3{
+                position: absolute;
+                top: 60vw;     /* adjust as needed */
+                left: 3rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 40vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+
+            .background-image-4{
+                position: absolute;
+                top: 100vw;      /* adjust as needed */
+                right: 3rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 40vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+        }
         .container{
             text-align: center;
             .subtitle{
-                font-weight: 500;
-                font-family: 'Odana';
-                font-size: 1.5rem;
-                margin: 0;
+                margin: 1rem;
+                font-weight: 600;
+                font-size: 2rem;
+                color: navy;
+                font-family: 'Odana'; 
+                br{
+                    display:none;
+                }
             }
+            p{
+                margin: 0.5rem;
+            };
         }
     }
 
@@ -31,6 +78,7 @@
         padding: 1rem;
         padding-left: 5%;
         padding-right: 5%;
+        margin-bottom: 3rem;
         .pic{
             position: relative;
             display: inline-block;
@@ -48,6 +96,39 @@
                 bottom: 2.5rem;
                 text-align: center; 
                 padding: 0.5rem;
+            }
+        }
+    }
+}
+
+@media(max-width:800px){
+    .content{
+        .section{
+            padding: 2rem 0.5rem;
+            .container{
+                text-align: center;
+                margin-bottom: 1rem;
+                .subtitle{
+                    margin: 0.5rem 0;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 1rem;
+                    margin: 0.3rem;
+                }
+            }
+        }
+
+        .profile{
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 3rem;
+            .pic{
+                width: 90vw;
+                img{
+                    width: 80vw;
+                }
             }
         }
     }

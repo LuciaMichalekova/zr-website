@@ -1,5 +1,5 @@
-.page{
-    background-image: url("/assets/img/symphony.webp");
+.content{
+    overflow: hidden;
     .main-title{
         position: relative;
         width: 100%;
@@ -15,23 +15,132 @@
         align-items: center; 
     }
 
-    .content{
+    .section{
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        margin: 1rem 0rem;
+        padding: 5rem 2rem;
         mat-tab-group{
-            width: 80%;
-            background-color: white;
-            border: 5px double rgb(204, 204, 204);
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 30px 30px rgba(255, 255, 255, 0.7);
             padding: 1rem;
             ul{
                 padding: 0rem 3.5rem;
                 li{
                     padding-top: 1rem;
                     padding-left: 0.5rem;
+                    .primary{
+                        color: navy;
+                        font-family: 'Odana';
+                        font-size: 1.5rem;
+                    }
+                    .secondary{
+                        color: rgb(180, 0, 0);
+                        font-family: 'Odana';
+                        font-size: 1.3rem;                       
+                    }
                 }
             }
         }
+    }
+    .background{
+        .background-image-1{
+            position: absolute;
+            top: 5rem;     /* adjust as needed */
+            left: 3rem;     /* adjust as needed */
+            z-index: -1;     /* behind the text */
+            width: 40vw;   /* or any size you want */
+            opacity: 0.3;   /* optional, to fade it behind text */
+        }
+
+        .background-image-2{
+            position: absolute;
+            top: 50rem;      /* adjust as needed */
+            right: 3rem;     /* adjust as needed */
+            z-index: -1;     /* behind the text */
+            width: 40vw;   /* or any size you want */
+            opacity: 0.3;   /* optional, to fade it behind text */
+        }        
+        .background-image-3{
+            position: absolute;
+            top: 95rem;     /* adjust as needed */
+            left: 3rem;     /* adjust as needed */
+            z-index: -1;     /* behind the text */
+            width: 40vw;   /* or any size you want */
+            opacity: 0.3;   /* optional, to fade it behind text */
+        }
+
+        .background-image-4{
+            position: absolute;
+            top: 130rem;      /* adjust as needed */
+            right: 3rem;     /* adjust as needed */
+            z-index: -1;     /* behind the text */
+            width: 40vw;   /* or any size you want */
+            opacity: 0.3;   /* optional, to fade it behind text */
+        }
+    }
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+    font-family: 'Odana';
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: navy !important;
+}
+
+@media(max-width:800px){
+    .content{
+        .section{
+            padding: 1rem 0.5rem;
+            mat-tab-group{
+                width: 100%;
+                padding: 0.5rem;
+                ul{
+                    padding: 0rem 2rem;
+                    li{
+                        padding-top: 0.2rem;
+                        padding-left: 0.5rem;
+                        font-size: 0.9rem;
+                        .primary{
+                            font-size: 1.2rem;
+                        }
+                        .secondary{
+                            font-size: 1rem;                       
+                        }
+                    }
+                }
+            }
+        }
+        .background{
+            .background-image-1{
+                top: 5rem;     /* adjust as needed */
+                left: -15rem;     /* adjust as needed */
+                width: 150vw;   /* or any size you want */
+            }
+
+            .background-image-2{
+                top: 45rem;      /* adjust as needed */
+                right: -15rem;     /* adjust as needed */
+                width: 150vw;   /* or any size you want */
+            }
+
+            .background-image-3{
+                top: 85rem;      /* adjust as needed */
+                left: -15rem;     /* adjust as needed */
+                width: 150vw;   /* or any size you want */
+            }
+            .background-image-4{
+                top: 125rem;      /* adjust as needed */
+                right: -15rem;     /* adjust as needed */
+                width: 150vw;   /* or any size you want */
+            }
+        }
+    }
+
+    .mat-mdc-tab .mdc-tab__text-label {
+        font-size: 1rem;
+        font-weight: 600;
     }
 }

@@ -1,15 +1,41 @@
-<div class="main-title">
-    <p>Aktuality</p>
-</div>
-
 <div class="content">
-    ...NA STRÁNKE SA PRACUJE...
-    <!-- <div class="container" *ngFor="let item of dataSource">
-        <p class="title"> {{ item.title }} </p>  
-        
-        <img class="title-image" src="{{item.titleImage}}" style="width: 15rem">
-        
-        <p class="text"> {{ item.text }} </p> 
-    </div> -->
+    <div class="main-title">
+        <p>Aktuality</p>
+    </div>
+    
+    <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide"> 
+        </div>
+
+        <div class="container" *ngFor="let item of pagedData">
+            <div class="title"> 
+                {{ item.title }} 
+            </div>
+
+            <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>
+                {{ item.date }}
+            </div>
+            
+            <div class="wrapper">
+                <img class="title-image" src="{{item.titleImage}}">
+                <div class="truncate"> 
+                    <p>{{ item.text }} </p>
+                    <a [routerLink]="['/aktuality', item.slug]">Čítať viac...</a>
+                </div> 
+            </div>
+
+            <hr>
+        </div>
+
+        <mat-paginator [length]="dataSource.length"
+                    [pageSize]="pageSize"
+                    [pageSizeOptions]="[5, 10, 20]"
+                    (page)="onPageChange($event)"
+                    showFirstLastButtons>
+        </mat-paginator>
+    </div>
 </div>
 
