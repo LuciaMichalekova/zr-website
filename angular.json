@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/zr-website",
-            "baseHref": "/",
+            "baseHref": "/zr-website/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -109,10 +109,6 @@
     }
   },
   "cli": {
-<<<<<<< HEAD
     "analytics": false
-=======
-    "analytics": "de017727-e8ec-4450-9017-b07bb15fe0fc"
->>>>>>> 2c08951b7e78c9e6d1cc94f192ee4f1bffdb792d
   }
 }
