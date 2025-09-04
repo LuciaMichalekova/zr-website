@@ -1,0 +1,36 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap" rel="stylesheet');
+@font-face {
+    font-family: 'Odana';
+    src: url('assets/fonts/Odana.otf');
+}
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family:  "Merienda", serif;
+    font-size: large;
+}
+button{
+    font-family: "Merienda", serif;
+}
+mat-button{
+    font-family: "Merienda", serif;
+}
+.main-title{
+    font-family:  'Odana';
+    font-weight: 500;
+    font-size: 6rem;
+    text-align: center;
+}
+
+@media(max-width: 700px){
+    .main-title{
+        font-size: 3.5rem;
+    }
+}
+
+//#FE0000 zr-cervena
+//#004DFF zr-modra
+

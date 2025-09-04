@@ -1,0 +1,96 @@
+.main-title{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    background-color: grey;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/IMG_0856(1).JPG");
+    filter: brightness(1.3);
+    background-position: center 30%;
+    background-attachment: fixed;
+    background-size: cover; /* Scales the image to cover the element */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    //TODO ODSTRANIT
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //ay po tadial
+    .section{
+        padding: 2rem 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .wrapper{
+            display: flex;
+            justify-content:center; 
+            margin-right: 5rem;
+            max-width: 30%;
+            .map{
+            }
+            .info{
+                text-align: center;
+                .segment{
+                    padding: 0.1rem;
+                }
+                .zeleziar{
+                    font-size: x-large;
+                    font-weight: 800;
+                }
+            }
+        }
+        .block{
+            background-color: grey;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/IMG_0856(1).JPG");
+            filter: brightness(1.3);
+            background-position: center 30%;
+            background-attachment: fixed;
+            background-size: cover; /* Scales the image to cover the element */
+            color: white;
+            margin-top: 2rem;
+            width: 50%;
+            padding: 0rem 2rem;
+            padding-bottom: 2rem;
+            .title{
+                text-align: center;
+                font-size: x-large;
+                font-weight: 800;
+                background-color:  rgba(0, 0, 0, 0.60);
+                padding: 0.8rem 0rem;
+            }
+            .contacts{
+                display: flex;
+                justify-content: center;  
+                align-items: center;
+                .contact{
+                    padding: 0.5rem 0.8rem;
+                    text-align: center;
+                    line-height: 1.2;
+                    background-color:  rgba(0, 0, 0, 0.60);
+                    min-width: 10rem;
+                    min-height: 8rem;
+                    margin-right: 2rem;
+                }
+                .text{
+                    display: flex;
+                    justify-content: center;  
+                    align-items: center;
+                    text-align: center;
+                    padding: 0.5rem 0.8rem;
+                    background-color:  rgba(0, 0, 0, 0.60);
+                    min-width: 10rem;   
+                    min-height: 8rem;
+                    line-height: 2.0;
+                }     
+            }
+        }
+    }
+    .text{
+        text-align: center;
+    }
+}

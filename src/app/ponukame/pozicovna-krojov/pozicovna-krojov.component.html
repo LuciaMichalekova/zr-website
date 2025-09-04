@@ -1,0 +1,80 @@
+<div class="page">
+    <div class="main-title">
+        <p> Požičovňa krojov </p>
+    </div>
+    
+    <div class="content">
+        <div class="wrapper">  
+            <div class="info">
+                <div class="section">
+                    <p class="primary" > Požičovňa krojov <br> Folklórneho súboru Železiar </p>
+                    <p class="secondary"> Kroje na svadby, oslavy, plesy, súťaže, <br> detské oslavy a iné podujatia.</p>
+                </div>
+
+                <div class="section">
+                    <p class="tertiary"> (Dom ľudového tanca) </p>                
+                    <p class="tertiary"> Starozagorská 10, </p>
+                    <p class="tertiary"> 04023, Košice </p>
+                    <p class="tertiary"> Slovensko </p>
+                </div>
+            </div>
+    
+            <div class="block">
+                <p class="title"> Kontaktujte nás a dohodnite si termín výberu a skúšky: </p>
+                
+                <div class="section">
+                    <div class="contact">
+                        <p><b>Zuzana Sitárová</b> <br> krojárka <br> +421 905 250 837</p>
+                    </div> 
+                    <div class="contact">
+                        Poradí, vyberie Vám vhodný kroj alebo krojovú súčasť podľa želania a upraví Vám ho priamo na Vašu postavu.
+                    </div> 
+                </div>
+            </div>
+        </div> 
+
+        <div class="text">
+            <p class="primary">Do krojárne vchádzajte z dvora. (vchod číslo 5, zvonček číslo 17)</p>  
+            <p><b>Poznámka:</b> Každý pondelok je sanitačný deň, krojáreň je <b>ZATVORENÁ.</b> </p> 
+        </div>   
+    
+        <div class="wrapper white"> 
+            <img src="assets/img/305696887_611341183950085_7818409004015241179_n.jpg" alt="">
+            
+            <div class="info transparent">
+                <div class="section">
+                    <p class="primary" > Svadobné čepčenie</p>
+                    <p class="tertiary">Ponúkame Vám aj obrad čepčenia v 2 variantoch v podaní FS Železiar.</p>
+                    <p class="secondary"><b> Viac info tu: </b></p>
+                    <div class="container2">
+                        <div class="element2 clickable" [routerLink]="['/ponukame/cepenie']" routerLinkActive="router-link-active" >
+                            <p class="element2-primary"> Svadobné čepčenie </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <img src="assets/img/305942642_1091677618379315_2271909170891964180_n.jpg" alt="">
+        </div>
+    
+        <div class="gallery">
+            <div class="photos white">
+                <p class="title"> Ponuka krojov</p>
+                <div class="photo" *ngFor="let item of dataSource">
+                    <img [src]="item.img" alt="" (click)="open(item)"> 
+                    <div class="name">
+                        <b>{{item.name}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="imageWrapper" id="wrapper" *ngIf="!isHidden">
+            <button class="action x" (click)="close()"> <i class="fa-solid fa-xmark"></i> </button>
+            <button class="action slider-left" aria-label="Previous Slide" (click)="slide(-1)"><i class="fa-solid fa-arrow-left-long fa-lg"></i></button>
+            <img src="{{image}}" id="fullImg">
+            <button class="action slider-right" aria-label="Next Slide" (click)="slide(1)"><i class="fa-solid fa-arrow-right-long fa-lg" ></i></button>
+
+        </div>
+    </div>    
+</div>

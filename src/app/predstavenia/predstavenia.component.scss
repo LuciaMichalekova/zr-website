@@ -1,0 +1,185 @@
+.main-title{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 3rem;
+  .title{
+    padding: 1rem;
+    text-align: center;  
+    font-size: 3rem; 
+    font-family: 'Odana';  
+    margin-bottom: 3rem;
+  }
+  .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    .wrapper{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 20%;
+        margin: 0;
+        text-align: left; 
+        p{
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .primary{
+          font-size: 1.5rem;
+          font-family: 'Odana';
+          font-weight: 600;
+          color:black;
+          margin-bottom: 0.2rem;
+        }
+        .secondary{
+          font-size: 1.3rem;
+          font-family: 'Odana';
+          color:grey;
+        }
+        .tertiary{
+          color: gray;
+          margin-bottom: 0.1rem;
+          i{
+            color: black;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  
+    button {
+      padding: 1rem;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
+      background-attachment: fixed;; /* Bootstrap blue */
+      background-size: cover; /* Scales the image to cover the element */
+      border-color: black;
+      font-size: 1.2rem;
+      font-family: 'Odana';
+      color: white;
+      cursor: pointer;
+      p{
+        margin: 0;
+      }
+      &:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
+        transition: ease-in-out;
+      }
+      &:active{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/assets/img/FS Železiar_Kino Scala_Prešov-38.jpg");
+        transition: ease-in-out;          
+      }
+    }
+  
+    hr {
+      width: 100%; /* Ensures the horizontal line spans the full width */
+      margin: 1rem 0; /* Adds spacing above and below the line */
+      border-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .button-round{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Odana';
+    width: 10rem;  
+    height: 10rem;
+    border-radius: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    margin-top: 2rem;
+    padding: 0.3rem;
+    cursor: pointer;
+    p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+        text-decoration: none;
+        background-color:  rgba(0, 0, 0, 0.60);
+        font-size: 1.2rem;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+    }
+  } 
+}
+
+@media(max-width: 800px){
+  .content{
+    .title{ 
+      font-size: 2rem; 
+      margin-bottom: 1rem;
+    }
+    .container {
+      .wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5%;
+        border: dotted 4px rgb(200, 200, 200);
+        padding: 1rem;
+        width: 90%;
+        .info {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin: 0.5rem;
+          text-align: center; 
+        }
+      }
+    
+      button {
+        padding: 0;
+        border-color: black;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+          border-radius: 50%; 
+          background-color: rgba(0, 0, 0, 0.6); 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 85%;
+          height: 85%;  
+        }
+      }
+    }
+  }  
+}

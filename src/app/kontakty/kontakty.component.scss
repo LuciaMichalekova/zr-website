@@ -1,0 +1,185 @@
+.page{
+    .main-title{
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        margin: 0 auto;
+        background-color: grey;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
+        background-position: center top;
+        background-attachment: fixed;
+        background-size: cover; /* Scales the image to cover the element */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content{
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content:center; 
+            align-items: center;
+            margin: 5rem 0rem;
+            padding: 0rem 7%;
+            .map{
+                width: 45%;
+                height: 27rem;
+                margin-right: 5%;
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                }
+            }
+              
+            .info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: white;
+                .section{
+                    .primary{
+                        font-size: 2.5rem;
+                        font-family:  'Odana';
+                        font-weight: 600;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .secondary{
+                        font-weight: bold;
+                        font-size: 2rem;
+                        font-family: 'Odana';
+                    }
+                    .tertiary{
+                        color: rgb(100, 100, 100);
+                    }
+                }
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    font-family: 'Odana';
+                    width: 10rem;  
+                    height: 10rem;
+                    border-radius: 50%;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
+                    background-attachment: fixed;
+                    background-size: cover;
+                    color: white;
+                    margin-top: 2rem;
+                    padding: 0.3rem;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: inherit;
+                        text-decoration: none;
+                        background-color:  rgba(0, 0, 0, 0.60);
+                        font-size: 1.2rem;
+                        width: 8rem;
+                        height: 8rem;
+                        border-radius: 50%;
+                    }
+                } 
+            }
+            
+        }
+        
+        .block{
+            background-color: grey;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
+            background-attachment: fixed;
+            background-size: cover; 
+            display: flex;
+            flex-direction: column;
+            color: white;
+            padding: 5rem 10%;
+            .title{
+                text-align: center;
+                font-family: 'Odana';
+                font-size: 2.5rem;
+                font-weight: 500;
+                background-color:  rgba(0, 0, 0, 0.60);
+                padding: 0.8rem 0rem;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+            .contacts{
+                display: flex;
+                flex-direction: row;
+                justify-content: center; 
+                align-items: center; 
+                .section{
+                    padding: 0.5rem 0.5rem;
+                    margin: 0 1rem;
+                    text-align: center;
+                    line-height: 1.2;
+                    background-color:  rgba(0, 0, 0, 0.60);
+                    border-radius: 5%;
+                    min-width: 25%;
+                    max-width: fit-content;
+                    .primary{
+                        font-family: 'Odana';
+                        font-size: 1.5rem;
+                    }
+                }     
+            }
+        }
+    }
+}
+
+@media (max-width: 800px){
+    .page{
+        .content{
+            .wrapper{
+                flex-direction: column-reverse;
+                margin-bottom: 0;
+                .map{
+                    width: 100%;
+                    height: 20rem;
+                    margin: 3rem 0rem;
+                    iframe{
+                        width: 100%;
+                        height: 100%;
+                        border: 0;
+                    }
+                }
+                .info{
+                    button{
+                        margin-bottom: 3rem;
+                    }
+                }
+            }
+            .block{
+                background-color: grey;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/img/bg/FS Železiar_Kino Scala_Prešov-26.jpg");
+                background-attachment: fixed;
+                background-size: cover; 
+                display: flex;
+                flex-direction: column;
+                font-size: 1.3rem;
+                color: white;
+                padding: 5rem 3%;
+                padding-bottom: 3rem;
+                .title{
+                    text-align: center;
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    background-color:  rgba(0, 0, 0, 0.60);
+                    padding: 0.8rem 0rem;
+                }
+                .contacts{
+                    flex-direction: column;
+                    .section{
+                        margin: 1rem 0rem;
+                    }     
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+<div class="title">
+    Umelecké vedenie
+</div>
+
+<div class="content">
+    <div class="info">
+        <div class="container">
+            <p class="subtitle">Umeleckí vedúci a choreografi</p>
+            <p>Ing. Lukáš Borovský</p>
+            <p>Mgr. Alena Kmecová Škodyová</p>
+        </div>
+
+        <div class="container">
+            <p class="subtitle">Vedúci tanečnej zložky</p>
+            <p>Jozef Ďurkovič</p>
+            <p>Katarína Mikitová</p>
+        </div>
+
+        <div class="container">
+            <p class="subtitle">Vedúci hudobnej zložky</p>
+            <p>Marek Ščurka</p>
+        </div>
+
+        <div class="container">
+            <p class="subtitle">Vedúca speváckej zložky</p>
+            <p>Michaela Bratrůová</p>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="pic" *ngFor="let item of dataSource">
+            <img src="{{item.image}}" alt="">
+            <div class="name">
+                <b>{{item.name}}</b>
+            </div>
+        </div>
+    </div>
+</div>
