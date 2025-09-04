@@ -1,132 +1,188 @@
-.page{
+.content{
+    overflow: hidden;
     .main-title{
         position: relative;
         width: 100%;
         height: 80vh;
         background-color: grey;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/bg/BI4F1302.jpg");
-        filter: contrast(1.1);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/img/bg/334277273_1326034581306574_5098482351838506347_n.webp");
+        filter: saturate(1.15); 
         background-attachment: fixed;
         background-size: cover;
-        background-position: center 35%;
+        background-position: center 15%;
         color: white;
         display: flex;
         justify-content: center; /* Centers text horizontally */
         align-items: center; /* Centers text vertically */
     }
 
-    .content{
-        //TODO: ZMAZAT
+    .section{
         display: flex;
-        justify-content: center;
+        position: relative;
+        flex-direction: column;
         align-items: center;
-        height: 20vh;
-        //
-        .section{
-            padding-top: 1rem;
-            padding-bottom:5rem;
-            .title{
-                display: flex;
-                justify-content: center;
-                font-size: xx-large;
-                padding-top: 1rem;
-                padding-bottom: 2rem;
+        text-align: center;
+        padding: 2rem;
+        .background{
+            .background-image-1{
+                position: absolute;
+                top: 5rem;     /* adjust as needed */
+                left: -5rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 60vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
             }
-            .segment{
-                display: flex;
-                padding-left: 15%;
-                padding-right: 15%;
-                align-items: center;
-                text-align: center;
-                .text-left{
-                    margin-right: 5rem;
+
+            .background-image-2{
+                position: absolute;
+                top: 70rem;      /* adjust as needed */
+                right: -5rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 60vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+            
+            .background-image-3{
+                position: absolute;
+                top: 135rem;     /* adjust as needed */
+                left: -5rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 60vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+
+            .background-image-4{
+                position: absolute;
+                top: 200rem;      /* adjust as needed */
+                right: -5rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 60vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+            .background-image-5{
+                position: absolute;
+                top: 270rem;     /* adjust as needed */
+                left: -5rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 60vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+            .background-image-6{
+                position: absolute;
+                top: 350rem;      /* adjust as needed */
+                right: -5rem;     /* adjust as needed */
+                z-index: -1;     /* behind the text */
+                width: 60vw;   /* or any size you want */
+                opacity: 0.3;   /* optional, to fade it behind text */
+            }
+        }
+        .container{
+            margin: 0.5rem;
+            max-width:50%;
+            div{
+                background-color: rgba(255, 255, 255, 0.6);
+                box-shadow: 0 0 25px 25px rgba(255, 255, 255, 0.6);
+                border-radius: 50px;   
+                padding: 1rem;
+            }
+            p{
+                margin: 0;
+            }
+            .primary{
+                margin: 0;
+                font-family: 'Odana';
+                color: rgb(180, 0, 0);
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            .secondary{
+                font-family: 'Odana';
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: navy;
+                margin: 0.2rem;
+            }
+            .tertiary{
+                font-family: "Odana";
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media(max-width:800px){
+    .content{
+        .section{
+            padding: 1rem;
+            .background{
+                .background-image-1{
+                    top: 5rem;     /* adjust as needed */
+                    left: -15rem;     /* adjust as needed */
+                    width: 150vw;   /* or any size you want */
                 }
-                .text-right{
-                    margin-left: 5rem;            
+
+                .background-image-2{
+                    top: 50rem;      /* adjust as needed */
+                    right: -15rem;     /* adjust as needed */
+                    width: 150vw;   /* or any size you want */
                 }
-                .img{
-                    width: 40%;
+                
+                .background-image-3{
+                    top: 105rem;     /* adjust as needed */
+                    left: -15rem;     /* adjust as needed */
+                    width: 150vw;   /* or any size you want */
                 }
-                .img-left{
-                    width: 40%;
-                    margin-left: 2rem;
+
+                .background-image-4{
+                    top: 160rem;      /* adjust as needed */
+                    right: -15rem;     /* adjust as needed */
+                    width: 150vw;   /* or any size you want */
                 }
-                .img-right{
-                    width: 40%;
-                    margin-right: 2rem;
+                .background-image-5{
+                    top: 210rem;     /* adjust as needed */
+                    left: -15rem;     /* adjust as needed */
+                    width: 150vw;   /* or any size you want */
+                }
+                .background-image-6{
+                    top: 270rem;      /* adjust as needed */
+                    right: -15rem;     /* adjust as needed */
+                    width: 150vw;   /* or any size you want */
                 }
             }
             .container{
-                display: flex;
-                justify-content: center;
-                padding: 1rem;
-                padding-left: 5%;
-                padding-right: 5%;
-                .element{
-                    text-align: center;
-                    width: 25%;
-                    background-color: grey;
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/bg/334799983_717597609847957_1473779763185668692_n.jpg");
-                    background-attachment: fixed;
-                    background-size: cover; /* Scales the image to cover the element */
-                    color: white;
-                    margin:0rem 2rem;
-                    padding: 0.3rem;
-                    border-radius: 5%;
-                    .element-primary{
-                        background-color:  rgba(0, 0, 0, 0.60);
-                        margin:0rem 1rem;
-                        padding:0.5rem
-                    }
-                    .element-secondary{
-                        font-size: small;
-                    }
-                    img{
-                        width: 90%;
-                        margin-top: 1rem;
-                        border: 0.5rem solid rgba(0, 0, 0, 0.60);
-                    }
+                margin: 0.5rem;
+                max-width: 90%;
+                div{
+                    padding: 0.5rem;
+                }
+                p{
+                    margin: 0;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                }
+                .primary{
+                    margin: 0;
+                    font-family: 'Odana';
+                    color: rgb(180, 0, 0);
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                .secondary{
+                    font-family: 'Odana';
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: navy;
+                    margin: 0.2rem;
+                }
+                .tertiary{
+                    font-family: "Odana";
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin: 0;
                 }
             }
-            .container2{
-                display: flex;
-                justify-content: center;
-                padding: 1rem;
-                padding-left: 5%;
-                padding-right: 5%;
-                .element2{
-                    display: flex;
-                    align-items: center; /* Vertical alignment */
-                    justify-content: center; /* Horizontal alignment */
-                    text-align: center;
-                    width: 10rem;   /* Set equal width and height */
-                    height: 10rem;
-                    border-radius: 50%; /* Makes it a circle */
-                    background-color: grey;
-                    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/bg/334799983_717597609847957_1473779763185668692_n.jpg");
-                    filter: contrast(1.1) saturate(1.3); 
-                    background-attachment: fixed;
-                    background-size: cover; /* Scales the image to cover the element */
-                    color: white;
-                    margin:0rem 2rem;
-                    padding: 0.3rem;
-                    .element2-primary{
-                        display: flex;
-                        align-items: center; /* Vertical alignment */
-                        justify-content: center; /* Horizontal alignment */
-                        background-color:  rgba(0, 0, 0, 0.60);
-                        width: 8rem;
-                        height: 8rem;
-                        border-radius: 50%; /* Makes it a circle */
-                    }
-                }                
-            }
-        }
-        .section-bg{
-            background-image: url("/assets/img/symphony.png");
-        }
-        .clickable{
-            cursor: pointer;
         }
     }
 }

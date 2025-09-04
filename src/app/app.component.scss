@@ -21,7 +21,7 @@
     .menu{
       li{
         a{
-          color: black !important;
+          color: navy !important;
         }
         .submenu{
           color: white !important;
@@ -33,10 +33,10 @@
         }
       } 
       .menu-burger{
-        color: black !important;
+        color: navy !important;
       }
       .social-media a i{
-        color: black !important;
+        color: navy !important;
       }
     } 
   }
@@ -91,7 +91,6 @@
             list-style: none;
             position: absolute;
             background-color: grey;
-            box-shadow: -2px -2px 2px rgb(222, 222, 222);
             color: white;
             min-width: 12rem;
             padding: 0.5rem;
@@ -135,7 +134,7 @@
         }
       } 
       .menu-burger{
-        color: black;
+        color: navy;
       }
     }
     .menu-burger {

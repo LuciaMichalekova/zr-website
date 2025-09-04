@@ -1,0 +1,23 @@
+.content{
+    padding: 8rem 5%;
+    .mat-expansion-panel-header {
+        height: 5rem;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 40rem;
+        .row-fields{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            mat-form-field {
+                width: 19rem;
+            }
+        }
+    }
+}
+
+input.mat-mdc-input-element::-webkit-calendar-picker-indicator {
+  display: block;
+}

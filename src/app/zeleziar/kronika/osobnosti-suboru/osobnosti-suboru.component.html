@@ -1,10 +1,176 @@
-<div class="page">
+<div class="content">
     <div class="main-title">
         <p>Osobnosti súboru</p>
     </div>
 
-    <div class="content">
-        ...NA STRÁNKE SA PRACUJE...
+    <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <div class="background">
+            <img src="assets/img/flower.jpg" class="background-image-1" alt="background">    
+            <img src="assets/img/flower.jpg" class="background-image-2" alt="background">
+        </div>
+
+        <h1 class="title">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Umeleckí vedúci a choreografi</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container">
+            <div *ngFor="let item of umeleckeVedenie">
+                <p class="primary">{{item.name}}</p>
+                <p class="secondary">{{item.start}} - {{item.end}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section transparent">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <h1 class="title white">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Asistenti choreografa</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container">
+            <div *ngFor="let item of asistentChoreografa">
+                <p class="primary">{{item.name}}</p>
+                <p class="secondary">{{item.start}} - {{item.end}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+    
+        <h1 class="title">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Krojárky</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container">
+            <div *ngFor="let item of krojarky">
+                <p class="primary">{{item.name}}</p>
+                <p class="secondary">{{item.start}} - {{item.end}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section transparent">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <h1 class="title white">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Organizační vedúci</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container">
+            <div *ngFor="let item of organizacniVeduci">
+                <p class="primary">{{item.name}}</p>
+                <p class="secondary">{{item.start}} - {{item.end}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <div class="background">
+            <img src="assets/img/flower.jpg" class="background-image-1" alt="background">    
+            <img src="assets/img/flower.jpg" class="background-image-2" alt="background">
+        </div>
+
+        <h1 class="title">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Pedagógovia</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container">
+            <div *ngFor="let item of pedagogovia">
+                <p class="primary">{{item.name}}</p>
+                <p class="secondary">{{item.start}} - {{item.end}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section transparent">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <h1 class="title white">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Vedúci tanečnej zložky</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container">
+            <div *ngFor="let item of veduciTanecnejZlozky">
+                <p class="primary">{{item.name}}</p>
+                <p class="secondary">{{item.start}} - {{item.end}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <h1 class="title">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Vedúci speváckej zložky</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container">
+            <div *ngFor="let item of veduciSpevackejZlozky">
+                <p class="primary">{{item.name}}</p>
+                <p class="secondary">{{item.start}} - {{item.end}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section transparent">
+        <div class="divider">
+            <img src="assets/svg/line1.png" alt="" class="line">
+            <img src="assets/svg/line1.png" alt="" class="line wide">
+        </div>
+
+        <h1 class="title white">
+            <img src="assets/img/zr-logo-left.png" alt="">
+            <span>Vedúci ľudovej hudby</span> 
+            <img src="assets/img/zr-logo-right.png" alt="">
+        </h1>
+
+        <div class="container">
+            <div *ngFor="let item of veduciLudovejHudby">
+                <p class="primary">{{item.name}}</p>
+                <p class="secondary">{{item.start}} - {{item.end}}</p>
+            </div>
+        </div>
     </div>
 </div>
 

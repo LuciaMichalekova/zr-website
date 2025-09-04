@@ -1,8 +1,8 @@
-
 <main>
   <nav class="navbar" [ngClass]="{'scrolled': scrolled}">
     <div class="logo" routerLink="/" routerLinkActive="active">
-      <img src="assets/img/zeleziar-logo-1019x1024-removebg-preview.png">
+      <img *ngIf="!scrolled" src="assets/img/zeleziar-logo-white.png">
+      <img *ngIf="scrolled" src="assets/img/zr-logo-color.png">
     </div>
 
     
@@ -16,7 +16,7 @@
         
         <ul class="submenu" *ngIf="activeSubMenu === 'zeleziar' || (!isMobile && activeSubMenu === 'zeleziar')">
             
-            <li routerLink="zeleziar/o-nas" routerLinkActive="active"> O nás </li> 
+            <li routerLink="o-nas" routerLinkActive="active"> O nás </li> 
             
             <li           
               (mouseover)="!isMobile ? activeSubSubMenu = 'obsadenie' : null" 
@@ -25,10 +25,10 @@
               <a (click)="isMobile ? toggleSubSubMenu('obsadenie') : null"> Obsadenie súboru </a> 
 
               <ul class="subsubmenu" *ngIf="activeSubSubMenu === 'obsadenie' || (!isMobile && activeSubSubMenu === 'obsadenie')">
-                <li routerLink="zeleziar/obsadenie-suboru/umelecke-vedenie" routerLinkActive="active">Vedenie</li>
-                <li routerLink="zeleziar/obsadenie-suboru/tanecna-zlozka" routerLinkActive="active">Tanečná zložka</li>
-                <li routerLink="zeleziar/obsadenie-suboru/spevacka-zlozka" routerLinkActive="active">Spevácka zložka</li>
-                <li routerLink="zeleziar/obsadenie-suboru/hudobna-zlozka" routerLinkActive="active">Hudobná zložka</li>             
+                <li routerLink="umelecke-vedenie" routerLinkActive="active">Umelecké vedenie</li>
+                <li routerLink="tanecna-zlozka" routerLinkActive="active">Tanečná zložka</li>
+                <li routerLink="spevacka-zlozka" routerLinkActive="active">Spevácka zložka</li>
+                <li routerLink="hudobna-zlozka" routerLinkActive="active">Hudobná zložka</li>             
               </ul>
             </li> 
 
@@ -39,42 +39,18 @@
               <a (click)="isMobile ? toggleSubSubMenu('kronika') : null"> Kronika </a> 
 
               <ul class="subsubmenu" *ngIf="activeSubSubMenu === 'kronika' || (!isMobile && activeSubSubMenu === 'kronika')">
-                <li routerLink="zeleziar/kronika/osobnosti-suboru" routerLinkActive="active"> Osobnosti súboru</li>
-                <li routerLink="zeleziar/kronika/archiv-vystupeni" routerLinkActive="active"> Archív vystúpení </li>
-                <li routerLink="zeleziar/kronika/archiv-premier" routerLinkActive="active"> Premiéry </li>
-                <!-- <li routerLink="" routerLinkActive="active"> Repertoár ? </li>
-                <li routerLink="" routerLinkActive="active"> Výročia ? </li> -->
-                <li routerLink="zeleziar/kronika/ocenenia" routerLinkActive="active"> Ocenenia</li>
-                <li routerLink="zeleziar/kronika/maraton-tanca" routerLinkActive="active"> Maratón tanca</li>            
-              </ul>
-            </li> 
-
-            <li
-              (mouseover)="!isMobile ? activeSubSubMenu = 'galeria' : null" 
-              (mouseleave)="!isMobile ? activeSubSubMenu = null : null">
-
-              <a (click)="isMobile ? toggleSubSubMenu('galeria') : null"> Galéria </a> 
-
-              <ul class="subsubmenu" *ngIf="activeSubSubMenu === 'galeria' || (!isMobile && activeSubSubMenu === 'galeria')">
-                <li routerLink="zeleziar/galeria" routerLinkActive="active">2024</li>
-                <li routerLink="zeleziar/galeria" routerLinkActive="active">2023</li>
-                <li routerLink="zeleziar/galeria" routerLinkActive="active">2022</li>
-                <li routerLink="zeleziar/galeria" routerLinkActive="active">2021</li>
-                <li routerLink="zeleziar/galeria" routerLinkActive="active">Archív</li>           
+                <li routerLink="osobnosti-suboru" routerLinkActive="active"> Osobnosti súboru</li>
+                <li routerLink="archiv-vystupeni" routerLinkActive="active"> Archív vystúpení </li>
+                <li routerLink="archiv-premier" routerLinkActive="active"> Premiéry </li>
+                <li routerLink="maraton-tanca" routerLinkActive="active"> Maratón tanca</li>            
               </ul>
             </li> 
           </ul>
         </li>
-        
-        <!-- <hr> -->
   
         <li> <a routerLink="aktuality" routerLinkActive="active"> Aktuality </a> </li>
-        
-        <!-- <hr> -->
-        
+            
         <li> <a routerLink="predstavenia" routerLinkActive="active"> Predstavenia </a> </li>
-        
-        <!-- <hr> -->
         
         <li 
           (mouseover)="!isMobile ? activeSubMenu = 'ponukame' : null" 
@@ -83,26 +59,24 @@
           <a (click)="isMobile ? toggleSubMenu('ponukame') : null"> Ponúkame </a>
           
           <ul class="submenu" *ngIf="activeSubMenu === 'ponukame' || (!isMobile && activeSubMenu === 'ponukame')">          
-            <li routerLink="ponukame/aktualne-programy" routerLinkActive="active"> Aktuálne programy </li> 
-            <li routerLink="ponukame/kurz-ludovych-tancov" routerLinkActive="active"> Kurz ľudových tancov </li> 
-            <li routerLink="ponukame/pozicovna-krojov" routerLinkActive="active"> Požičovňa krojov </li> 
-            <li routerLink="ponukame/cepenie" routerLinkActive="active"> Svadobné čepenie </li> 
-            <li routerLink="ponukame/produkty" routerLinkActive="active"> Produkty </li> 
+            <li routerLink="aktualne-programy" routerLinkActive="active"> Aktuálne programy </li> 
+            <li routerLink="kurz-ludovych-tancov" routerLinkActive="active"> Kurz ľudových tancov </li> 
+            <li routerLink="pozicovna-krojov" routerLinkActive="active"> Požičovňa krojov </li> 
+            <li routerLink="cepenie" routerLinkActive="active"> Svadobné čepčenie </li> 
+            <!-- <li routerLink="produkty" routerLinkActive="active"> Produkty </li>  -->
           </ul>
         </li>
-        
-        <!-- <hr> -->
   
         <li> <a routerLink="kontakty" routerLinkActive="active"> Kontakty </a> </li>
-  
-        <!-- <hr> -->
+
+        <li> <a routerLink="nastavenia" routerLinkActive="active"><i class="fa-solid fa-gear"></i></a> </li>
       </div>
 
       <span [class.open]="isMenuOpen || !isMobile" class="social-media">
-        <a href="https://www.instagram.com/fszeleziar/"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/fszeleziar/"><i class="fab fa-facebook-square"></i></a>
-        <a href="https://open.spotify.com/artist/3iVHeOvxcqmDHPei0mFJWJ"><i class="fab fa-spotify"></i></a>
-        <a href="https://www.youtube.com/@ensembleZeleziar"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/fszeleziar/"> <i class="fab fa-instagram"></i> </a>
+        <a href="https://www.facebook.com/fszeleziar/"> <i class="fab fa-facebook-square"></i> </a>
+        <a href="https://open.spotify.com/artist/3iVHeOvxcqmDHPei0mFJWJ"> <i class="fab fa-spotify"></i> </a>
+        <a href="https://www.youtube.com/@ensembleZeleziar"> <i class="fab fa-youtube"></i> </a>
       </span>
     </ul>
 
