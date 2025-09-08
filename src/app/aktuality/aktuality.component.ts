@@ -43,9 +43,7 @@ export class AktualityComponent implements OnInit, AfterViewInit {
   updatePagedData() {
     const start = this.pageIndex * this.pageSize;
     const end = start + this.pageSize;
-    console.log(start, end);
     this.pagedData = this.dataSource.slice(start, end);
-    console.log(this.pagedData);
   }
 
   onPageChange(event: PageEvent) {

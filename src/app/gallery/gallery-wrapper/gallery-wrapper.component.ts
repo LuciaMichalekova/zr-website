@@ -31,7 +31,6 @@ export class GalleryWrapperComponent {
   }
 
   scrolll(){
-    console.log("scrolll");
     var images = document.querySelector(".scroll-box")!;
     const screenWidth = images.scrollWidth;
     const scrollAmount = screenWidth / images.childElementCount;
@@ -39,7 +38,6 @@ export class GalleryWrapperComponent {
   }
 
   scrollr(){
-    console.log("scrollr");
     var images = document.querySelector(".scroll-box")!;
     const screenWidth = images.scrollWidth;
     const scrollAmount = screenWidth / images.childElementCount;

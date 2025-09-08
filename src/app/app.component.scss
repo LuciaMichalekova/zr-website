@@ -121,8 +121,10 @@
 
 @media (max-width: 1200px) {
   .navbar{
+    font-size: 1.2rem;
     &.scrolled {
-      color: white !important;
+      color: white;
+      font-weight: 500;
       box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.21);
       transition: 200ms ease-in-out;
       .menu{
@@ -131,6 +133,16 @@
         }
         li a{
           color: white !important;
+        }
+        div{
+          li {
+            .submenu {
+              color: rgb(150, 150, 150) !important;
+              a{
+                color: rgb(150, 150, 150) !important;
+              }
+            }
+          }
         }
       } 
       .menu-burger{
@@ -166,6 +178,7 @@
         }
         li {
           border-bottom: 1px solid black;
+          padding: 0.2rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -174,9 +187,11 @@
             position: static;
             min-width: none;
             display: block;
+            font-size: 1rem;
             z-index: 0;
             color: rgb(150, 150, 150);
-            margin: 0.5rem;
+            margin: 0rem;
+            
             a{
               color: rgb(150, 150, 150);
             }
@@ -186,7 +201,7 @@
               background-color: black;
               box-shadow: none;
               color: white;
-              font-size: 1rem;
+              font-size: 0.8rem;
               margin-top: 0.3rem;
               z-index: 0; 
             }

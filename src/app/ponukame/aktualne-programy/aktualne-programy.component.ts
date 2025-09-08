@@ -42,7 +42,6 @@ export class AktualneProgramyComponent {
 
   //TODO: nech to ide pre kazdy scroll-box - document.querySelector berie len 1. prvok
   scrolll(){
-    console.log("scrolll");
     var images = document.querySelector(".scroll-box")!;
     const screenWidth = images.scrollWidth;
     const scrollAmount = screenWidth / images.childElementCount;
@@ -50,7 +49,6 @@ export class AktualneProgramyComponent {
   }
 
   scrollr(){
-    console.log("scrollr");
     var images = document.querySelector(".scroll-box")!;
     const screenWidth = images.scrollWidth;
     const scrollAmount = screenWidth / images.childElementCount;
