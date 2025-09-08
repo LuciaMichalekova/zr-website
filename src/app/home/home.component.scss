@@ -170,7 +170,7 @@
                         }
                         .buy-button{
                             background-color: grey; 
-                            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url("assets/img/bg/15355773_10209655670221423_5272341476702747746_n.jpg");
+                            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), image-set(var(--img_7746_n));
                             background-attachment: fixed;
                             background-size: cover;
                             margin-top: auto;
@@ -196,7 +196,7 @@
 
                         .special{
                             background-color: grey; 
-                            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url("assets/img/bg/15355773_10209655670221423_5272341476702747746_n.jpg");
+                            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), image-set(var(--img_7746_n));
                             background-attachment: fixed;
                             background-size: cover;
                             margin-top: auto;
@@ -302,7 +302,7 @@
                         text-overflow: ellipsis;
                     }
                     .button {
-                        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url("assets/img/bg/15355773_10209655670221423_5272341476702747746_n.jpg");
+                        background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), image-set(var(--img_7746_n));
                         background-attachment: fixed;
                         display: flex;
                         justify-content: center;
@@ -335,7 +335,7 @@
             .button{
                 width: 8rem;
                 height: 8rem;
-                background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url("assets/img/bg/15355773_10209655670221423_5272341476702747746_n.jpg");
+                background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), image-set(var(--img_7746_n));
                 background-attachment: fixed;
                 background-size: cover;
                 color: white;
@@ -360,7 +360,7 @@
         }
     }
     .transparent{
-        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.4)), url("assets/img/bg/15355773_10209655670221423_5272341476702747746_n.jpg");
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.4)), image-set(var(--img_7746_n));
         background-attachment: fixed;
         background-size: cover;
         .white{
@@ -389,7 +389,7 @@
         }
         .actions{
             .button{
-                background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/img/bg/15355773_10209655670221423_5272341476702747746_n.jpg");
+                background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), image-set(var(--img_7746_n));
                 span{
                     background-color: rgba(0, 0, 0, 0.419);
                     display: flex;
