@@ -122,6 +122,7 @@
 @media (max-width: 1200px) {
   .navbar{
     font-size: 1.2rem;
+    height: 3rem;
     &.scrolled {
       color: white;
       font-weight: 500;
@@ -147,6 +148,11 @@
       } 
       .menu-burger{
         color: navy;
+      }
+    }
+    .logo{
+      img{
+        width: 3rem;
       }
     }
     .menu-burger {
